@@ -17,7 +17,7 @@ const postsReducer = (state = {}, action) => {
   return state;
 };
 
-const speaclitiesReducer = (state = {}, action) => {
+const specialitiesReducer = (state = {}, action) => {
     if (action.type === GET_ALL_SPECIALITIES) {
         return {
           ...state,
@@ -53,7 +53,7 @@ const teachersReducer = (state = {}, action) => {
     if (action.type === GET_ALL_TEACHERS) {
         return {
           ...state,
-          teachers: action.teachers,
+          teachers: action.teachers
         };
       }
     
@@ -73,7 +73,7 @@ const fragmentReducer = (state = {}, action) => {
 export {
   fragmentReducer,
   postsReducer,
-  speaclitiesReducer,
+  specialitiesReducer,
   coursesReducer,
   teachersReducer,
 };

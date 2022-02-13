@@ -5,13 +5,13 @@ import {
   fragmentReducer,
   coursesReducer,
   postsReducer,
-  speaclitiesReducer,
+  specialitiesReducer,
   teachersReducer,
 } from "./reducers";
 
 export default createStore(
   combineReducers({
-    speaclitiesReducer,
+    specialitiesReducer,
     fragmentReducer,
     teachersReducer,
     postsReducer,

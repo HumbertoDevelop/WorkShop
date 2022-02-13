@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const registration = (e) => {
   e.preventDefault();
@@ -72,7 +73,7 @@ const Register = () => {
           <div className="form_item ">
             <input type="submit" className="button " value="Registrar" />
             <br />
-            <a href="/login">Ya tienes cuenta?</a>
+            <NavLink to="/login">Ya tienes cuenta?</NavLink>
           </div>
         </form>
       </div>

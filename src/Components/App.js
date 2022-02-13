@@ -14,8 +14,7 @@ import Login from "./Pages/Login";
 import NotFound from "./Pages/404";
 import Header from "./Organims/Header";
 import './App.css'; 
-// import '../styles/styles.scss'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/styles.scss";
 const App = () => {
   return (
     <div>
