@@ -13,8 +13,8 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import NotFound from "./Pages/404";
 import Header from "./Organims/Header";
-import './App.css'; 
-import "../styles/styles.scss";
+import Footer from "./Organims/Footer";
+import "./App.css";
 const App = () => {
   return (
     <div>
@@ -98,6 +98,7 @@ const App = () => {
         {/* Default Route */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

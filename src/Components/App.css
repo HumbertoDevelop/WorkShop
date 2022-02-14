@@ -1,22 +1,23 @@
-:root{
-    --paddingList-sides: .55rem;
+:root {
+  --paddingList-sides: 0.55rem;
 }
 
-ul,ol{
-    list-style: none;
-    display: flex;
-    align-items: center;
+ul,
+ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-ul > li{
-    padding: 0 var(--paddingList-sides);
+ul > li {
+  padding: 0 var(--paddingList-sides);
 }
 
-ol > li{
-    padding: 0 var(--paddingList-sides);
+ol > li {
+  padding: 0 var(--paddingList-sides);
 }
 
-a{
-    text-decoration: none;
-    color: inherit; 
+a {
+  text-decoration: none;
+  color: inherit;
 }
