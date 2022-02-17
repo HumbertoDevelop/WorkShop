@@ -89,7 +89,7 @@ const Register = () => {
           >
             Registrar
           </button>
-          <NavLink to="/login">Ya tienes cuenta?</NavLink>
+          <NavLink className="w-max" to="/login">Ya tienes cuenta?</NavLink>
         </form>
       </div>
     </section>

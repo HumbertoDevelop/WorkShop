@@ -2,37 +2,60 @@ import React from "react";
 import Axios from "axios";
 import { NavLink } from "react-router-dom";
 
-const authentication = (e) => {
+//Promise Axios.get()
+const axiosGet = (data) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(
+        Axios.get(`${process.env.REACT_APP_URL_API}/signup`)
+          .then((r) => {
+            //Comienzo de pruebas para validar en base de datos que el usuario esta o no registrado
+            console.log("=======================");
+            console.log(data);
+            //r.data arreglo de objetos 
+            let arrObj = r.data.map((el) => el);
+            console.log(typeof arrObj);
+            var prop = [];
+            // recorriendo cada prop de cada objeto
+            for (const key in arrObj) {
+              if (arrObj.hasOwnProperty.call(arrObj, key)) {
+                  
+                //enviando el valor de cada prop de cada objeto al arreglo creado prop en forma de cadena de texto
+                  const element = arrObj[key];
+                   prop.push(Object.values(element))
+                
+              }
+            }
+            //recorriendo el arreglo nuevo creado en prop
+            prop.forEach(el => {
+              //revisando si el arreglo de propiedades creado dentro del arreglo prop con .includes
+              el.forEach(val => val.includes(data.email))
+            });
+            console.log(prop[0].indexOf(data.email));
+            // r.data.includes(data.email && data.password)
+            // localStorage.setItem("token", e.email);
+            // alert(`Welcome back ${e.name}`);
+            // window.location = "/";
+          })
+          .catch((e) => {
+            // alert("Algo inesperado ocurrio!");
+            console.log(`Error: ${e}`);
+          })
+      );
+    }, 1000);
+  });
+};
+
+//Async funtion que llama await axiosGet()
+const authentication = async (e) => {
   e.preventDefault();
   const form = e.target;
   const data = {
     email: form.email.value,
     password: form.password.value,
   };
-  Axios.get(`${process.env.REACT_APP_URL_API}/signup`)
-    .then((r) => {
-      console.log(data);
-       r.data.map((e) => {
-        console.log(e);
-        if (
-          data.email.toString() === e.email.toString() &&
-          parseInt(data.password) === parseInt(e.password)
-        ) {
-          localStorage.setItem("token", e.email);
-           alert(`Welcome back ${e.name}`);
-
-
-           return window.location = "/";
-           
-          
-        }
-         alert("Correo o contraseña invalido porfavor intentelo denuevo");
-      });
-    })
-    .catch((e) => {
-      alert("Algo inesperado ocurrio!");
-      console.log(`Error: ${e}`);
-    });
+  console.log("calling res");
+  await axiosGet(data);
 };
 
 const Login = () => {
@@ -88,7 +111,9 @@ const Login = () => {
           </button>
 
           <br />
-          <NavLink to="/register">No tienes cuenta aun?</NavLink>
+          <NavLink className="w-max" to="/register">
+            No tienes cuenta aun?
+          </NavLink>
         </form>
       </div>
     </section>
