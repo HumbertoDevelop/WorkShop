@@ -18,7 +18,7 @@ const Courses = ({ courses }) => {
           alt: "Banner Cursos",
         }}
         title="Nuestros Cursos"
-        subtitle="Comienza desde cero hoy mismo en tu camino a dominar la tecnologia"
+        subtitle="Comienza desde cero hoy mismo en tu camino a dominar el Ingles"
       />
       {courses && (
         <main className="ed-grid m-grid-5">

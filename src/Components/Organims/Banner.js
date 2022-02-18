@@ -23,14 +23,14 @@ import { Link } from "react-router-dom";
 const Banner = ({ image, title, subtitle, home }) => (
   <div>
     {home ? (
-      <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">{title}</h2>
-        <div class="md:w-3/5 md:pl-6">
-          <p class="leading-relaxed text-base">{subtitle}</p>
-          <div class="flex md:mt-4 mt-6">
+      <section className="text-gray-600 body-font">
+      <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <h2 className="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5">{title}</h2>
+        <div className="md:w-3/5 md:pl-6">
+          <p className="leading-relaxed text-base">{subtitle}</p>
+          <div className="flex md:mt-4 mt-6">
            <NavLink to="/cursos">
-             <button class="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-600 rounded">Ver cursos</button>
+             <button className="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-600 rounded">Ver cursos</button>
              </NavLink> 
             
           </div>

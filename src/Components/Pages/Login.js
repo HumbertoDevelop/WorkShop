@@ -9,40 +9,28 @@ const axiosGet = (data) => {
       resolve(
         Axios.get(`${process.env.REACT_APP_URL_API}/signup`)
           .then((r) => {
-            //Comienzo de pruebas para validar en base de datos que el usuario esta o no registrado
-            console.log("=======================");
-            console.log(data);
-            //r.data arreglo de objetos 
-            let arrObj = r.data.map((el) => el);
-            console.log(typeof arrObj);
-            var prop = [];
-            // recorriendo cada prop de cada objeto
-            for (const key in arrObj) {
-              if (arrObj.hasOwnProperty.call(arrObj, key)) {
-                  
-                //enviando el valor de cada prop de cada objeto al arreglo creado prop en forma de cadena de texto
-                  const element = arrObj[key];
-                   prop.push(Object.values(element))
-                
-              }
+            let email = r.data.map((user) => user.email);
+            let pass = r.data.map((user) => user.password);
+
+            if (
+              email.find((d) => d === data.email) &&
+              pass.find((d) => d === data.password)
+            ) {
+              localStorage.setItem("token", data.email);
+
+              window.location = "/";
+            } else {
+             alert("Contraseña o Email invalido!");
             }
-            //recorriendo el arreglo nuevo creado en prop
-            prop.forEach(el => {
-              //revisando si el arreglo de propiedades creado dentro del arreglo prop con .includes
-              el.forEach(val => val.includes(data.email))
-            });
-            console.log(prop[0].indexOf(data.email));
-            // r.data.includes(data.email && data.password)
-            // localStorage.setItem("token", e.email);
-            // alert(`Welcome back ${e.name}`);
-            // window.location = "/";
+
+           
           })
           .catch((e) => {
-            // alert("Algo inesperado ocurrio!");
+            alert("Algo inesperado ocurrio!");
             console.log(`Error: ${e}`);
           })
       );
-    }, 1000);
+    }, 0);
   });
 };
 
@@ -68,7 +56,7 @@ const Login = () => {
           </h1>
           <p className="leading-relaxed mt-4">
             Don't miss anymore time and{" "}
-            <span className="text-cyan-400">TAKE YOUR COURSE NOW!</span>
+            <span className="text-yellow-400">TAKE YOUR COURSE NOW!</span>
           </p>
         </div>
         <form

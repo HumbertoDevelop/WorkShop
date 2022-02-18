@@ -11,17 +11,19 @@ const registration = (e) => {
     name: form.fullname.value,
     password: form.password.value,
   };
-
-  Axios.post(`${process.env.REACT_APP_URL_API}/signup`, data)
-    .then((r) => {
-      localStorage.setItem("token", r.data.email);
-      alert(`Te has registrado correctamente ${form.fullname.value}`);
-      window.location = "/";
-    })
-    .catch((e) => {
-      alert("Error al crear usuario");
-      console.log(`Error: ${e}`);
-    });
+  if (data.email || data.name || data.password !== "") {
+    Axios.post(`${process.env.REACT_APP_URL_API}/signup`, data)
+      .then((r) => {
+        alert(`Te has registrado correctamente ${data.name}`);
+        window.location = "/login";
+      })
+      .catch((e) => {
+        alert("Algo inesperado ocurrio al crear usuario");
+        console.log(`Error: ${e}`);
+      });
+  } else {
+    alert("Debes rellenar los campos");
+  }
 };
 
 const Register = () => {
@@ -30,11 +32,13 @@ const Register = () => {
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <h1 className="title-font font-medium text-3xl text-white">
-            <span className="text-red-600">Curso 100% online</span> Aprende inglés más rápido y más fácil este 2022
+            <span className="text-red-600">Curso 100% online</span> Aprende
+            inglés más rápido y más fácil este 2022
           </h1>
           <p className="leading-relaxed mt-4">
-            Clases en directo <span className="text-cyan-400">ILIMITADAS</span> las 24 horas del día Profesores nativos
-            Preparación para exámenes internacionales
+            Clases en directo <span className="text-yellow-400">ILIMITADAS</span>{" "}
+            las 24 horas del día Profesores nativos Preparación para exámenes
+            internacionales
           </p>
         </div>
         <form
@@ -89,7 +93,9 @@ const Register = () => {
           >
             Registrar
           </button>
-          <NavLink className="w-max" to="/login">Ya tienes cuenta?</NavLink>
+          <NavLink className="w-max" to="/login">
+            Ya tienes cuenta?
+          </NavLink>
         </form>
       </div>
     </section>
