@@ -16,7 +16,7 @@ const Specialities = ({ specialities }) => {
       colorFrom='from-red-900'
       colorTo="to-gray-900"
         image={{
-          src: "https://images.pexels.com/photos/4992763/pexels-photo-4992763.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          src: "https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Especialidades",
         }}
         title="Especialidades"
