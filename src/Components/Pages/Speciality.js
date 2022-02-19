@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getallSpecialities } from "../../Redux/actionCreators";
+import {getSpeciality } from "../../Redux/actionCreators";
 import store from "../../Redux/store";
-const Speciality = (state) => {
+const Speciality = () => {
   useEffect(() => {
-    store.dispatch(getallSpecialities());
+    store.dispatch(getSpeciality());
   }, []);
-  console.log(state);
   return (
     <section className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-col">
@@ -79,8 +78,8 @@ const Speciality = (state) => {
   );
 };
 
-const mapToStateToProps = (state) => ({
+const mapStateToProps = (state) => ({
   speciality: state.specialitiesReducer.speciality,
 });
 
-export default connect(mapToStateToProps, {})(Speciality);
+export default connect(mapStateToProps, {})(Speciality);

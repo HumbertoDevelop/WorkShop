@@ -8,8 +8,7 @@ import Card from "../Organims/Card";
 const Specialities = ({ specialities }) => {
   useEffect(() => {
     store.dispatch(getallSpecialities());
-  }, []);
-  console.log(specialities);
+  },[]);
   return (
     <>
       <Banner

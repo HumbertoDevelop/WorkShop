@@ -5,17 +5,17 @@ const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
   <div>
     {home ? (
       <section
-        classNameName={`text-gray-600 body-font bg-gradient-to-t ${colorFrom} ${colorTo} `}
+        className={`text-gray-600 body-font bg-gradient-to-t ${colorFrom} ${colorTo} `}
       >
-        <div classNameName="container h-80 mx-auto flex flex-wrap items-center">
-          <h2 classNameName="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">
+        <div className="container h-80 mx-auto flex flex-wrap items-center">
+          <h2 className="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">
             {title}
           </h2>
-          <div classNameName="md:w-3/5 md:pl-6">
-            <p classNameName="leading-relaxed text-gray-400">{subtitle}</p>
-            <div classNameName="flex md:mt-4 mt-6">
+          <div className="md:w-3/5 md:pl-6">
+            <p className="leading-relaxed text-gray-400">{subtitle}</p>
+            <div className="flex md:mt-4 mt-6">
               <NavLink to="/cursos">
-                <button classNameName="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 rounded">
+                <button className="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 rounded">
                   Ver cursos
                 </button>
               </NavLink>

@@ -9,7 +9,6 @@ const Courses = ({ courses }) => {
   useEffect(() => {
     store.dispatch(getallCourses());
   }, []);
-  console.log(courses);
   return (
     <>
       <Banner
