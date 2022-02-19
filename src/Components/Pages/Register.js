@@ -28,7 +28,7 @@ const registration = (e) => {
 
 const Register = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font">
+    <section className="text-gray-400 bg-gray-900 body-font ">
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <h1 className="title-font font-medium text-3xl text-white">
@@ -36,9 +36,9 @@ const Register = () => {
             inglés más rápido y más fácil este 2022
           </h1>
           <p className="leading-relaxed mt-4">
-            Clases en directo <span className="text-yellow-400">ILIMITADAS</span>{" "}
-            las 24 horas del día Profesores nativos Preparación para exámenes
-            internacionales
+            Clases en directo{" "}
+            <span className="text-yellow-400">ILIMITADAS</span> las 24 horas del
+            día Profesores nativos Preparación para exámenes internacionales
           </p>
         </div>
         <form

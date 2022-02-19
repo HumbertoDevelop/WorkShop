@@ -13,7 +13,7 @@ const Teachers = ({ match, teachers }) => {
   return (
     <>
       <Banner
-        colorFrom='from-cyan-800'
+        colorFrom="from-cyan-800"
         colorTo="to-gray-900"
         image={{
           src: "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",

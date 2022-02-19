@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import { getallSpecialities } from "../../Redux/actionCreators";
 import store from "../../Redux/store";
 import Banner from "../Organims/Banner";

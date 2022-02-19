@@ -7,7 +7,7 @@ const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
       <section
         className={`text-gray-600 body-font bg-gradient-to-t ${colorFrom} ${colorTo} `}
       >
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <div className="container h-80 mx-auto flex flex-wrap items-center">
           <h2 className="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">
             {title}
           </h2>
@@ -24,15 +24,22 @@ const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
         </div>
       </section>
     ) : (
-      <section className={`text-gray-600 bg-gradient-to-t ${colorFrom} ${colorTo}`}>
-        <div className="container mx-auto">
-          <div className=" flex flex-col sm:flex-row sm:items-center py-2">
-            <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">
-              {title} <br />
-              {subtitle}
-            </h1>
-
-            <img src={image.src} alt={image.alt} className="max-h-72" />
+      <section class={`text-gray-400 bg-gradient-to-t ${colorFrom} ${colorTo} body-font`}>
+        <div class="container  py-10 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+            <div class="w-full sm:p-4 px-4 mb-6">
+              <h1 class="title-font font-medium text-xl mb-2 text-white">
+                {title}
+              </h1>
+              <div class="leading-relaxed">{subtitle}</div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+            <img
+              class="object-cover object-center w-full max-h-80"
+              src={image.src}
+              alt={image.alt}
+            />
           </div>
         </div>
       </section>

@@ -37,22 +37,31 @@ const Header = () => {
           {localStorage.getItem("token") ? <PrivateMenu /> : null}
         </nav>
         {localStorage.getItem("token") ? (
-          <a href="/login" onClick={() => removeToken()}>
-            <button className="inline-flex items-center bg-cyan-700 border-0 py-1 px-3 focus:outline-none hover:bg-cyan-800 rounded text-base mt-4 md:mt-0 text-stone-100">
-              Cerrar Sesión
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-1"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </a>
+          <div className="flex items-center">
+            <a href="/login" onClick={() => removeToken()}>
+              <button className="inline-flex items-center bg-cyan-700 border-0 py-1 px-3 focus:outline-none hover:bg-cyan-800 rounded text-base mt-4 md:mt-0 text-stone-100">
+                Cerrar Sesión
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  className="w-4 h-4 ml-1"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </a>
+            <div className="flex -space-x-2 overflow-hidden mx-2">
+              <img
+                className="inline-block h-10 w-10 rounded-full ring-2 ring-gray-900"
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt=""
+              />
+            </div>
+          </div>
         ) : null}
       </div>
     </header>

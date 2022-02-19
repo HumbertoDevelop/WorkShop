@@ -12,13 +12,11 @@ const Publication = ({ title, author, fecha, content, fechaM }) => {
         </span>
       </div>
       <div className="flex-grow pl-6">
-        <a href="/" className="inline-flex items-center">
-          <span className="flex-grow flex flex-col pl-3">
+          <span className="flex-grow flex flex-col ">
             <span className="title-font font-medium text-gray-100">
               {author}
             </span>
           </span>
-        </a>
         <h1 className="title-font text-xl font-medium text-cyan-600 mb-3">
           {title}
         </h1>
