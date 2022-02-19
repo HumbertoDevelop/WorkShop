@@ -14,9 +14,10 @@ const Specialities = ({ specialities }) => {
   return (
     <>
       <Banner
-        color="first-color"
+      colorFrom='from-red-900'
+      colorTo="to-gray-900"
         image={{
-          src: "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          src: "https://images.pexels.com/photos/4992763/pexels-photo-4992763.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Especialidades",
         }}
         title="Especialidades"
@@ -25,7 +26,7 @@ const Specialities = ({ specialities }) => {
       {
       specialities && (
         <section className="text-gray-400 body-font bg-gray-900">
-          <div className="container px-5 py-24 mx-auto">
+          <div className="container px-5 py-20 mx-auto">
             <div className="flex flex-wrap -m-4">
               {specialities.map((s) => (
                 <Card

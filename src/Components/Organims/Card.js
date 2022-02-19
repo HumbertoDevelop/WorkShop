@@ -11,7 +11,9 @@ const Card = ({ picture, name, cardId, path }) => {
         <h3 className="tracking-widest text-indigo-400 text-xs font-medium title-font">
           Title
         </h3>
-        <h2 className="text-lg text-white font-medium title-font mb-4">{name}</h2>
+        <h2 className="text-lg text-white font-medium title-font mb-4">
+          {name}
+        </h2>
         <p className="leading-relaxed text-base">
           Fingerstache flexitarian street art 8-bit waistcoat. Distillery
           hexagon disrupt edison bulbche.

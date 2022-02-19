@@ -12,7 +12,8 @@ const Home = ({ posts }) => {
   return (
     <>
       <Banner
-        color="dark-color"
+      colorFrom='from-yellow-800'
+      colorTo="to-gray-900"
         image={{
           src: "https://cdn.pixabay.com/photo/2020/05/05/12/12/coffee-5132832__340.jpg",
           alt: "Banner Home",
@@ -21,13 +22,13 @@ const Home = ({ posts }) => {
         subtitle="Nuestro equipo ha desarrollado esta plataforma pensando en ti"
         home
       />
-      <main className="bg-gray-900 text-gray-400 body-font">
+      <main className="bg-gray-900 text-gray-400 body-font ">
         <div className="container px-5 py-2 mx-auto">
           <div className="flex flex-wrap -mx-4 -my-8">
-            <h2 className="text-slate-900 text-lg">Ultimas publicaciones</h2>
             <div>
               {posts ? (
-                <div className="py-8 px-4 ">
+                <div className="py-8 px-4">
+                  <h2 className="text-yellow-500 text-lg">Ultimas publicaciones</h2>
                   {posts.map((p) => (
                     <Publication
                       title={p.title}

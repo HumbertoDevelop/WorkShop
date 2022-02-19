@@ -2,7 +2,7 @@ import React from "react";
 
 const Publication = ({ title, author, fecha, content, fechaM }) => {
   return (
-    <div className="h-full flex items-start">
+    <div className="h-full flex items-start mt-2">
       <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
         <span className="text-cyan-500 pb-2 mb-2 border-b-2 border-gray-200">
           {fechaM}

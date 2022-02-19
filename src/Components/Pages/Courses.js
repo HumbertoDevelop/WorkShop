@@ -13,7 +13,8 @@ const Courses = ({ courses }) => {
   return (
     <>
       <Banner
-        color="first-color"
+        colorFrom='from-violet-900'
+        colorTo="to-gray-900"
         image={{
           src: "https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Cursos",
