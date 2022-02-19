@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Teacher = ({ picture, name, country }) => {
+const Teacher = ({ picture, name, country, speciality }) => {
   return (
     <div className="p-2 lg:w-1/2 md:w-max">
       <div className="flex border-2 rounded-lg border-gray-700 p-2 sm:flex-row flex-col  ">
@@ -18,17 +18,18 @@ const Teacher = ({ picture, name, country }) => {
             <p className="leading-relaxed text-base">{country}</p>
           </div>
         </div>
-        <div className="">
+        <div className="grid content-between">
           <p>
             Profesor, docente o enseñante es quien se dedica profesionalmente a
             la enseñanza, ya sea con carácter general o especializado en una
             determinada área de conocimiento, asignatura, disciplina académica,
-            ciencia o arte. Además de la transmisión de valores, técnicas y
-            conocimientos generales o específicos de la materia que enseña,
-            parte de la función pedagógica del profesor consiste en facilitar el
-            aprendizaje para que el alumno (estudiante o discente) lo alcance de
-            la mejor manera posible.
+            ciencia o arte.
           </p>
+          <div className="border-t border-yellow-500">
+            
+          <h2>Especialidad</h2>
+          <p>{speciality}</p>
+          </div>
         </div>
       </div>
     </div>

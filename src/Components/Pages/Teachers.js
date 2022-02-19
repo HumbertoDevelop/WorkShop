@@ -32,6 +32,7 @@ const Teachers = ({ match, teachers }) => {
                   picture={t.picture}
                   name={t.name}
                   country={t.country}
+                  speciality={t.speciality}
                 />
               ))}
             </div>
