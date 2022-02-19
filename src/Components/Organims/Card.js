@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 
 const Card = ({ picture, name, cardId, path }) => {
   return (
-    <article className="card s-border">
-      <div className="img-container s-ratio-16-9">
+    <div className="xl:w-1/4 md:w-1/2 p-4">
+      <div className="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
         <Link to={`/${path}/${cardId}`}>
           <img src={picture} alt={name} />
         </Link>
+        <h3 className="tracking-widest text-indigo-400 text-xs font-medium title-font">
+          Title
+        </h3>
+        <h2 className="text-lg text-white font-medium title-font mb-4">{name}</h2>
+        <p className="leading-relaxed text-base">
+          Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+          hexagon disrupt edison bulbche.
+        </p>
       </div>
-      <div className="card__data s-pxy-2">
-        <h3 className="t4 center">{name}</h3>
-      </div>
-    </article>
+    </div>
   );
 };
 

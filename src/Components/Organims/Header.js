@@ -3,13 +3,14 @@ import { NavLink } from "react-router-dom";
 import PrivateMenu from "../Molecules/PrivateMenu";
 
 const menu = createRef();
-const removeToken = () => {
-    localStorage.removeItem("token");
+
+const removeToken = async () => {
+  localStorage.removeItem("token");
   window.location = "/login";
 };
 const Header = () => {
   return (
-    <header className="text-gray-400 bg-gray-700 body-font">
+    <header className="text-gray-400 bg-gray-900 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <NavLink
           to="/"
@@ -22,7 +23,7 @@ const Header = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            className="w-10 h-10 text-white p-2 bg-cyan-800 rounded-full"
+            className="w-10 h-10 text-white p-2 bg-cyan-700 rounded-full"
             viewBox="0 0 24 24"
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -37,7 +38,7 @@ const Header = () => {
         </nav>
         {localStorage.getItem("token") ? (
           <a href="/login" onClick={() => removeToken()}>
-            <button className="inline-flex items-center bg-cyan-700 border-0 py-1 px-3 focus:outline-none hover:bg-cyan-600 rounded text-base mt-4 md:mt-0 text-stone-100">
+            <button className="inline-flex items-center bg-cyan-700 border-0 py-1 px-3 focus:outline-none hover:bg-cyan-800 rounded text-base mt-4 md:mt-0 text-stone-100">
               Cerrar Sesión
               <svg
                 fill="none"

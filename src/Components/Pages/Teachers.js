@@ -15,23 +15,27 @@ const Teachers = ({ match, teachers }) => {
       <Banner
         color="third-color"
         image={{
-          src: "https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb",
+          src: "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner profesor",
         }}
         title="Nuestros Profesores"
         subtitle="Este plantel docente esta altamente calificado para guiarte en tu educación"
       />
       {teachers && (
-        <main className="ed-grid m-grid-3 lg-grid-4 row-gap">
-          {teachers.map((t) => (
-            <Teacher
-              key={t.id}
-              picture={t.picture}
-              name={t.name}
-              country={t.country}
-            />
-          ))}
-        </main>
+        <section className="text-gray-400 bg-gray-900 body-font">
+          <div className="container px-5 py-24 mx-auto flex flex-wrap">
+            <div className="flex flex-wrap -m-4 mx-auto justify-center">
+              {teachers.map((t) => (
+                <Teacher
+                  key={t.id}
+                  picture={t.picture}
+                  name={t.name}
+                  country={t.country}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       )}
     </>
   );

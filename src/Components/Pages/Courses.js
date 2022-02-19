@@ -9,29 +9,34 @@ const Courses = ({ courses }) => {
   useEffect(() => {
     store.dispatch(getallCourses());
   }, []);
+  console.log(courses);
   return (
     <>
       <Banner
         color="first-color"
         image={{
-          src: "https://images.pexels.com/photos/265614/pexels-photo-265614.jpeg?w=1260&amp;h=750&amp;auto=compress&amp;cs=tinysrgb",
+          src: "https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Cursos",
         }}
         title="Nuestros Cursos"
         subtitle="Comienza desde cero hoy mismo en tu camino a dominar el Ingles"
       />
       {courses && (
-        <main className="ed-grid m-grid-5">
-          {courses.map((c) => (
-            <Card
-              key={c.id}
-              picture={c.picture}
-              name={c.name}
-              path="cursos"
-              cardId={c.id}
-            />
-          ))}
-        </main>
+        <section className="text-gray-400 body-font bg-gray-900">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap -m-4">
+              {courses.map((c) => (
+                <Card
+                  key={c.id}
+                  picture={c.picture}
+                  name={c.name}
+                  path="cursos"
+                  cardId={c.id}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       )}
     </>
   );

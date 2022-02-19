@@ -1,6 +1,6 @@
 import React from "react";
 
-const Publication = ({ title, author, fecha, content, fechaM, image }) => {
+const Publication = ({ title, author, fecha, content, fechaM }) => {
   return (
     <div className="h-full flex items-start">
       <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
@@ -13,11 +13,6 @@ const Publication = ({ title, author, fecha, content, fechaM, image }) => {
       </div>
       <div className="flex-grow pl-6">
         <a href="/" className="inline-flex items-center">
-          <img
-            alt="blog"
-            src={image}
-            className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
-          />
           <span className="flex-grow flex flex-col pl-3">
             <span className="title-font font-medium text-gray-100">
               {author}

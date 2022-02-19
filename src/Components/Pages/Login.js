@@ -74,7 +74,7 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-cyan rounded border border-gray-600 focus:border-cyan text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
@@ -88,12 +88,12 @@ const Login = () => {
               type="password"
               id="password"
               name="password"
-              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-cyan rounded border border-gray-600 focus:border-cyan text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-cyan-800 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="text-white bg-cyan-700 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-800 rounded text-lg"
           >
             Iniciar Sesión
           </button>

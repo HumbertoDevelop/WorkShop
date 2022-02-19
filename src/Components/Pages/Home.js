@@ -21,10 +21,10 @@ const Home = ({ posts }) => {
         subtitle="Nuestro equipo ha desarrollado esta plataforma pensando en ti"
         home
       />
-      <main className="bg-gray-700 text-gray-400 body-font">
+      <main className="bg-gray-900 text-gray-400 body-font">
         <div className="container px-5 py-2 mx-auto">
           <div className="flex flex-wrap -mx-4 -my-8">
-            <h2 className="text-gray-900">Ultimas publicaciones</h2>
+            <h2 className="text-slate-900 text-lg">Ultimas publicaciones</h2>
             <div>
               {posts ? (
                 <div className="py-8 px-4 ">
@@ -35,7 +35,6 @@ const Home = ({ posts }) => {
                       fecha={p.fecha}
                       fechaM={p.fechaM}
                       content={p.content}
-                      image={p.image}
                       key={p.id}
                     />
                   ))}

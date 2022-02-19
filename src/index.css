@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+text-1: text-slate-900
+text-2: text-white
+bg-1: bg-gray-900
+bg-2: bg-gray-800
+bg-focus-1: bg-gray-600
+details-1: text-yellow-400
+details-2: text-gray-400
+hover: hover:bg-cyan-800
+*/
