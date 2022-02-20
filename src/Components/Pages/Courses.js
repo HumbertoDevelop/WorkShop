@@ -20,6 +20,7 @@ const Courses = ({ courses }) => {
         }}
         title="Nuestros Cursos"
         subtitle="Comienza desde cero hoy mismo en tu camino a dominar el Ingles"
+        courses
       />
       {courses && (
         <section className="text-gray-400 body-font bg-gray-900">

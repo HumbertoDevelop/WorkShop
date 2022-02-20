@@ -19,6 +19,7 @@ const Teachers = ({ match, teachers }) => {
           src: "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner profesor",
         }}
+        teachers
         title="Nuestros Profesores"
         subtitle="Este plantel docente esta altamente calificado para guiarte en tu educación"
       />

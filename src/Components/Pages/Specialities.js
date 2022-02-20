@@ -20,6 +20,7 @@ const Specialities = ({ specialities }) => {
         }}
         title="Especialidades"
         subtitle="Domina una tecnologia con las rutas de aprendizaje que te ofrecemos"
+        specialities
       />
       {
       specialities && (

@@ -8,7 +8,7 @@ const removeToken = () => {
 };
 const Header = () => {
   return (
-    <header className="text-white bg-cyan-600 body-font ">
+    <header className="text-white bg-cyan-800 body-font ">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <NavLink
           to="/"
@@ -34,7 +34,7 @@ const Header = () => {
         {localStorage.getItem("token") ? (
           <div className="flex items-center ">
             <a href="/login" onClick={() => removeToken()}>
-              <button className="inline-flex items-center bg-cyan-900 border-0 py-1 px-2 focus:outline-none hover:bg-cyan-800 rounded text-base mt-4 md:mt-0 text-stone-100">
+              <button className="inline-flex items-center  border-0 py-1 px-2 focus:outline-none hover:text-slate-900 rounded text-base mt-4 md:mt-0 text-stone-100">
                 Cerrar Sesión
                 <svg
                   fill="none"
@@ -42,7 +42,7 @@ const Header = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  className="w-4 h-4 ml-1"
+                  className="w-4 h-4 ml-1 mt-1"
                   viewBox="0 0 24 24"
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
