@@ -28,30 +28,30 @@ const registration = (e) => {
 
 const Register = () => {
   return (
-    <section className="text-gray-400 bg-gray-900 body-font ">
+    <section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center">
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
-        <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-          <h1 className="title-font font-medium text-3xl text-white">
+        <div className="lg:w-2/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+          <h1 className="title-font font-medium text-3xl ">
             <span className="text-red-600">Curso 100% online</span> Aprende
             inglés más rápido y más fácil este 2022
           </h1>
           <p className="leading-relaxed mt-4">
             Clases en directo{" "}
-            <span className="text-yellow-400">ILIMITADAS</span> las 24 horas del
+            <span className="text-yellow-900 font-semibold">ILIMITADAS</span> las 24 horas del
             día Profesores nativos Preparación para exámenes internacionales
           </p>
         </div>
         <form
           onSubmit={registration.bind()}
-          className="lg:w-2/6 md:w-1/2 bg-gray-800 bg-opacity-50 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
+          className="lg:w-2/6 md:w-1/2 bg-white bg-opacity-50 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
         >
-          <h2 className="text-white text-lg font-medium title-font mb-5">
+          <h2 className=" text-lg font-medium title-font mb-5">
             Crear Cuenta
           </h2>
           <div className="relative mb-4">
             <label
               htmlFor="fullname"
-              className="leading-7 text-sm text-gray-400"
+              className="leading-7 text-sm "
             >
               Full Name
             </label>
@@ -59,24 +59,24 @@ const Register = () => {
               type="text"
               id="fullname"
               name="fullname"
-              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-cyan-500 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-stale rounded border border-cyan-600 focus:border-cyan text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="email" className="leading-7 text-sm ">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-cyan-500 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-stale rounded border border-cyan-600 focus:border-cyan text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
             <label
               htmlFor="password"
-              className="leading-7 text-sm text-gray-400"
+              className="leading-7 text-sm "
             >
               Password
             </label>
@@ -84,7 +84,7 @@ const Register = () => {
               type="password"
               id="password"
               name="password"
-              className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-cyan-500 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-stale rounded border border-cyan-600 focus:border-cyan text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <button

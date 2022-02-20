@@ -10,7 +10,7 @@ const Specialities = ({ specialities }) => {
     store.dispatch(getallSpecialities());
   },[]);
   return (
-    <>
+    <div >
       <Banner
       colorFrom='from-red-900'
       colorTo="to-gray-900"
@@ -39,7 +39,7 @@ const Specialities = ({ specialities }) => {
           </div>
         </section>
       )}
-    </>
+    </div>
   );
 };
 

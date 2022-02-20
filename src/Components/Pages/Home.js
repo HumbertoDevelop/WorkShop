@@ -28,7 +28,7 @@ const Home = ({ posts }) => {
             <div>
               {posts ? (
                 <div className="py-8 px-4">
-                  <h2 className="text-yellow-500 text-lg">Ultimas publicaciones</h2>
+                  <h2 className="text-cyan-300 text-lg">Ultimas publicaciones</h2>
                   {posts.map((p) => (
                     <Publication
                       title={p.title}

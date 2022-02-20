@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
   <div>
     {home ? (
       <section
-        className={`text-gray-600 body-font bg-gradient-to-t ${colorFrom} ${colorTo} `}
+        className={`body-font bg-gradient-to-t ${colorFrom} ${colorTo} bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-20`}
       >
-        <div className="container h-80 mx-auto flex flex-wrap items-center">
-          <h2 className="sm:text-3xl text-2xl text-white font-medium title-font mb-2 md:w-2/5">
+        <div className="container h-40 mx-auto flex flex-wrap items-center justify-between">
+          <h2 className="sm:text-3xl text-2xl font-medium  title-font mb-2 md:w-2/5">
             {title}
           </h2>
-          <div className="md:w-3/5 md:pl-6">
-            <p className="leading-relaxed text-gray-400">{subtitle}</p>
+          <div className="md:w-1/3 ">
+            <p className="leading-relaxed ">{subtitle}</p>
             <div className="flex md:mt-4 mt-6">
               <NavLink to="/cursos">
                 <button className="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 rounded">
@@ -24,7 +25,7 @@ const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
         </div>
       </section>
     ) : (
-      <section className={`text-gray-400 bg-gradient-to-t ${colorFrom} ${colorTo} body-font`}>
+      <section className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center`}>
         <div className="container  py-10 mx-auto flex flex-wrap">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
             <div className="w-full sm:p-4 px-4 mb-6">
@@ -35,11 +36,13 @@ const Banner = ({ image, title, subtitle, home, colorFrom, colorTo }) => (
             </div>
           </div>
           <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
+            <Link to="/cursos">
             <img
               className="object-cover object-center w-full max-h-80"
               src={image.src}
               alt={image.alt}
-            />
+              />
+              </Link>
           </div>
         </div>
       </section>
