@@ -50,11 +50,11 @@ const Login = () => {
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center text-slate-900">
         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <h1 className="title-font font-medium text-3xl ">
-            Welcome Back! ☕
+            Bienvenido! ☕
           </h1>
           <p className="leading-relaxed mt-4">
-            Don't miss anymore time and{" "}
-            <span className="text-red-700 font-semibold">TAKE YOUR COURSE NOW!</span>
+            No pierdas mas tiempo y{" "}
+            <span className="text-red-700 font-semibold">APRENDE INGLES ONLINE AHORA!</span>
           </p>
         </div>
         <form
@@ -81,7 +81,7 @@ const Login = () => {
               htmlFor="password"
               className="leading-7 text-sm "
             >
-              Password
+              Contraseña
             </label>
             <input
               type="password"

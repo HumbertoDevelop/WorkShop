@@ -25,7 +25,7 @@ const Teacher = ({ picture, name, country, speciality }) => {
             determinada área de conocimiento, asignatura, disciplina académica,
             ciencia o arte.
           </p>
-          <div className="border-t border-yellow-500">
+          <div className="border-t border-cyan-400">
             
           <h2>Especialidad</h2>
           <p>{speciality}</p>

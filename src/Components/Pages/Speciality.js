@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import {getSpeciality } from "../../Redux/actionCreators";
 import store from "../../Redux/store";
-const Speciality = () => {
+const Speciality = ({speciality}) => {
   useEffect(() => {
     store.dispatch(getSpeciality());
   }, []);
+  console.log(speciality);
   return (
     <section className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-col">

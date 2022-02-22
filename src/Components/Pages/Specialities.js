@@ -5,10 +5,11 @@ import store from "../../Redux/store";
 import Banner from "../Organims/Banner";
 import Card from "../Organims/Card";
 
-const Specialities = ({ specialities }) => {
+const Specialities = ({specialities }) => {
   useEffect(() => {
     store.dispatch(getallSpecialities());
   },[]);
+  console.log(specialities);
   return (
     <div >
       <Banner

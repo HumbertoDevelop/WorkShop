@@ -53,7 +53,7 @@ const Register = () => {
               htmlFor="fullname"
               className="leading-7 text-sm "
             >
-              Full Name
+              Nombre completo
             </label>
             <input
               type="text"
@@ -78,7 +78,7 @@ const Register = () => {
               htmlFor="password"
               className="leading-7 text-sm "
             >
-              Password
+              Contraseña
             </label>
             <input
               type="password"
@@ -89,7 +89,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="text-white bg-cyan-800 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="text-white bg-cyan-800 border-0 py-2 px-8 focus:outline-none hover:bg-cyan-900 rounded text-lg"
           >
             Registrar
           </button>
