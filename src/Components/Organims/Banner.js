@@ -15,10 +15,11 @@ const Banner = ({
 }) => (
   <div>
     {home ? (
-      <section
-        className={`body-font bg-gradient-to-t ${colorFrom} ${colorTo} bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96 grid container-center  `}
-      >
-        <div className="container  mx-auto flex flex-wrap items-center justify-between ">
+      <section>
+        <div
+          className={`body-font bg-gradient-to-t ${colorFrom} ${colorTo} bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96 grid items-center blur-sm `}
+        ></div>
+        <div className="container  mx-auto flex flex-wrap items-center justify-between absolute top-1/3 left-0 right-0 ">
           <h2 className="sm:text-3xl text-2xl font-medium title-font mb-2 md:w-2/5 ">
             {title}
           </h2>
@@ -37,36 +38,13 @@ const Banner = ({
         </div>
       </section>
     ) : specialities ? (
-      <section
-        className={` bg-gradient-to-t ${colorFrom} ${colorTo}  body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')]  bg-no-repeat bg-cover bg-center py-10 bg-fixed `}
-      >
-        <div className="container mx-auto flex flex-wrap">
-          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start  sm:pr-10">
-            <div className="w-full sm:p-4 px-4 mb-6 text-white bg-cyan-900 rounded opacity-90  ">
-              <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
-              <div className="leading-relaxed">
-                <h3>{subtitle}</h3>
-              </div>
-            </div>
-          </div>
-          <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-            <Link to="/cursos">
-              <img
-                className="object-cover object-center w-full max-h-80"
-                src={image.src}
-                alt={image.alt}
-              />
-            </Link>
-          </div>
-        </div>
-      </section>
-    ) : courses ? (
-      <section
-        className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed`}
-      >
-        <div className="container   mx-auto flex flex-wrap">
-          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-            <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-90 text-white">
+      <section>
+        <div
+          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+        ></div>
+        <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/3 left-0 right-0">
+          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
+            <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
               <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
               <div className="leading-relaxed">
                 <h3>
@@ -75,38 +53,41 @@ const Banner = ({
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-            <Link to="/cursos">
-              <img
-                className="object-cover object-center w-full max-h-80"
-                src={image.src}
-                alt={image.alt}
-              />
-            </Link>
+        </div>
+      </section>
+    ) : courses ? (
+      <section>
+        <div
+          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+        ></div>
+        <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/3 left-0 right-0">
+          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
+            <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
+              <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
+              <div className="leading-relaxed">
+                <h3>
+                  <h3>{subtitle}</h3>
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     ) : teachers ? (
-      <section
-        className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font  bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed`}
-      >
-        <div className="container   mx-auto flex flex-wrap">
-          <div className="flex flex-wrap  -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
-            <div className="w-full bg-cyan-900 rounded opacity-90 text-white sm:p-4 px-4 mb-6 ">
+      <section>
+        <div
+          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+        ></div>
+        <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/3 left-0 right-0">
+          <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
+            <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
               <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
               <div className="leading-relaxed">
-                <h3>{subtitle}</h3>
+                <h3>
+                  <h3>{subtitle}</h3>
+                </h3>
               </div>
             </div>
-          </div>
-          <div className="lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0">
-            <Link to="/cursos">
-              <img
-                className="object-cover object-center w-full max-h-80"
-                src={image.src}
-                alt={image.alt}
-              />
-            </Link>
           </div>
         </div>
       </section>
