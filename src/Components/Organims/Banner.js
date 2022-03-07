@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 const Banner = ({
@@ -24,9 +23,9 @@ const Banner = ({
             {title}
           </h2>
           <div className="md:w-1/3 ">
-            <p className="leading-relaxed ">
+            <div className="leading-relaxed ">
               <h3>{subtitle}</h3>
-            </p>
+            </div>
             <div className="flex md:mt-4 mt-6">
               <NavLink to="/cursos">
                 <button className="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 rounded">
@@ -47,9 +46,7 @@ const Banner = ({
             <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
               <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
               <div className="leading-relaxed">
-                <h3>
-                  <h3>{subtitle}</h3>
-                </h3>
+                <h3>{subtitle}</h3>
               </div>
             </div>
           </div>
@@ -65,9 +62,7 @@ const Banner = ({
             <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
               <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
               <div className="leading-relaxed">
-                <h3>
-                  <h3>{subtitle}</h3>
-                </h3>
+                <h3>{subtitle}</h3>
               </div>
             </div>
           </div>
@@ -83,9 +78,7 @@ const Banner = ({
             <div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
               <h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
               <div className="leading-relaxed">
-                <h3>
-                  <h3>{subtitle}</h3>
-                </h3>
+                <h3>{subtitle}</h3>
               </div>
             </div>
           </div>

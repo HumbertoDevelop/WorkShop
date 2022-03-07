@@ -9,7 +9,6 @@ const Specialities = ({specialities }) => {
   useEffect(() => {
     store.dispatch(getallSpecialities());
   },[]);
-  console.log(specialities);
   return (
     <div >
       <Banner

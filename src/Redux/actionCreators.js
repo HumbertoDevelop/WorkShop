@@ -8,6 +8,7 @@ import {
   GET_COURSE,
   GET_POST,
   GET_SPECIALITY,
+  GET_TEACHER,
 } from "./actions";
 const API_URL = process.env.REACT_APP_URL_API;
 export const getallPosts = () => (dispatch) => {
@@ -39,6 +40,14 @@ export const getallTeachers = () => (dispatch) => {
     return dispatch({
       type: GET_ALL_TEACHERS,
       teachers: res.data,
+    });
+  });
+};
+export const getTeacher = (id) => (dispatch) => {
+  Axios.get(`${API_URL}/profesores/${id}`).then((res) => {
+    return dispatch({
+      type: GET_TEACHER,
+      teacher: res.data,
     });
   });
 };

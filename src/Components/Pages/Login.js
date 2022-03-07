@@ -46,7 +46,7 @@ const authentication = async (e) => {
 
 const Login = () => {
   return (
-    <section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center">
+    <section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-6">
       <div className="container px-5 py-24 mx-auto flex flex-wrap items-center text-slate-900">
         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <h1 className="title-font font-medium text-3xl ">

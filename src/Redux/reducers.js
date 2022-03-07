@@ -1,4 +1,4 @@
-import { GET_ALL_COURSES, GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_TEACHERS, GET_COURSE, GET_FRAGMENT, GET_POST, GET_SPECIALITY } from "./actions";
+import { GET_ALL_COURSES, GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_TEACHERS, GET_COURSE, GET_FRAGMENT, GET_POST, GET_SPECIALITY, GET_TEACHER } from "./actions";
 
 const postsReducer = (state = {}, action) => {
   if (action.type === GET_ALL_POSTS) {
@@ -54,6 +54,12 @@ const teachersReducer = (state = {}, action) => {
         return {
           ...state,
           teachers: action.teachers
+        };
+      }
+    if (action.type === GET_TEACHER) {
+        return {
+          ...state,
+          teacher: action.teacher
         };
       }
     

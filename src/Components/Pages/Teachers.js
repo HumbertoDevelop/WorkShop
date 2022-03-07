@@ -6,7 +6,6 @@ import Banner from "../Organims/Banner";
 import Teacher from "../Organims/Teacher";
 
 const Teachers = ({ match, teachers }) => {
-  console.log(teachers);
   useEffect(() => {
     store.dispatch(getallTeachers());
   }, [match]);

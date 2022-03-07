@@ -36,17 +36,6 @@ const Header = () => {
             <a href="/login" onClick={() => removeToken()}>
               <button className="inline-flex items-center  border-0  hover:text-red-400 rounded text-base mt-4 md:mt-0 text-stone-100">
                 Cerrar Sesión
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-4 h-4 ml-1 mt-1"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
               </button>
             </a>
           </div>
