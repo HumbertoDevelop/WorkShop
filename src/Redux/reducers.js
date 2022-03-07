@@ -1,4 +1,15 @@
-import { GET_ALL_COURSES, GET_ALL_POSTS, GET_ALL_SPECIALITIES, GET_ALL_TEACHERS, GET_COURSE, GET_FRAGMENT, GET_POST, GET_SPECIALITY, GET_TEACHER } from "./actions";
+import {
+  ADD_TO_CART,
+  GET_ALL_COURSES,
+  GET_ALL_POSTS,
+  GET_ALL_SPECIALITIES,
+  GET_ALL_TEACHERS,
+  GET_COURSE,
+  GET_FRAGMENT,
+  GET_POST,
+  GET_SPECIALITY,
+  GET_TEACHER,
+} from "./actions";
 
 const postsReducer = (state = {}, action) => {
   if (action.type === GET_ALL_POSTS) {
@@ -18,61 +29,79 @@ const postsReducer = (state = {}, action) => {
 };
 
 const specialitiesReducer = (state = {}, action) => {
-    if (action.type === GET_ALL_SPECIALITIES) {
-        return {
-          ...state,
-          specialities: action.specialities,
-        };
-      }
-    
-      if (action.type === GET_SPECIALITY) {
-        return {
-          ...state,
-          speciality: action.speciality,
-        };
-      }
+  if (action.type === GET_ALL_SPECIALITIES) {
+    return {
+      ...state,
+      specialities: action.specialities,
+    };
+  }
+
+  if (action.type === GET_SPECIALITY) {
+    return {
+      ...state,
+      speciality: action.speciality,
+    };
+  }
   return state;
 };
+
+const courseObj = { courseName: "", coursePrice: 0 };
+const initialStateCart = {
+  coursesCart: [],
+  totalPrice: 0,
+};
+
+const cartReducer = (state = initialStateCart, action) => {
+  
+  if (action.type === ADD_TO_CART) {
+    return {
+      ...state,
+      addCart: action.addCart,
+    };
+  }
+  return state;
+};
+
 const coursesReducer = (state = {}, action) => {
-    if (action.type === GET_ALL_COURSES) {
-        return {
-          ...state,
-          courses: action.courses,
-        };
-      }
-    
-      if (action.type === GET_COURSE) {
-        return {
-          ...state,
-          course: action.course,
-        };
-      }
+  if (action.type === GET_ALL_COURSES) {
+    return {
+      ...state,
+      courses: action.courses,
+    };
+  }
+
+  if (action.type === GET_COURSE) {
+    return {
+      ...state,
+      course: action.course,
+    };
+  }
   return state;
 };
+
 const teachersReducer = (state = {}, action) => {
-    if (action.type === GET_ALL_TEACHERS) {
-        return {
-          ...state,
-          teachers: action.teachers
-        };
-      }
-    if (action.type === GET_TEACHER) {
-        return {
-          ...state,
-          teacher: action.teacher
-        };
-      }
-    
-      
+  if (action.type === GET_ALL_TEACHERS) {
+    return {
+      ...state,
+      teachers: action.teachers,
+    };
+  }
+  if (action.type === GET_TEACHER) {
+    return {
+      ...state,
+      teacher: action.teacher,
+    };
+  }
+
   return state;
 };
 const fragmentReducer = (state = {}, action) => {
-    if (action.type === GET_FRAGMENT) {
-        return {
-          ...state,
-          fragment: action.fragment,
-        };
-      }
+  if (action.type === GET_FRAGMENT) {
+    return {
+      ...state,
+      fragment: action.fragment,
+    };
+  }
   return state;
 };
 
@@ -81,5 +110,6 @@ export {
   postsReducer,
   specialitiesReducer,
   coursesReducer,
+  cartReducer,
   teachersReducer,
 };

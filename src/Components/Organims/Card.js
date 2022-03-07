@@ -16,11 +16,21 @@ const Card = ({ picture, name, cardId, path }) => {
           hexagon disrupt edison bulbche.
         </p>
         <div className="grid grid-cols-2 gap-y-1 gap-x-5 text-sm pt-2">
-          <button class="rounded-full bg-cyan-800 text-white">
-            <a  onClick={() => window.alert('Curso comprado con exito')}> Comprar </a>
+          <button className="rounded-full bg-cyan-800 text-white">
+            <a onClick={() => window.alert("Curso comprado con exito")}>
+              {" "}
+              Comprar{" "}
+            </a>
           </button>
-          <button class="rounded-full bg-cyan-800   text-white">
-            <a  onClick={() => window.alert('Curso agregado al carrito con exito')}> Reservar </a>
+          <button className="rounded-full bg-cyan-800   text-white">
+            <a
+              onClick={() =>
+                window.alert("Curso agregado al carrito con exito")
+              }
+            >
+              {" "}
+              Reservar{" "}
+            </a>
           </button>
         </div>
       </div>

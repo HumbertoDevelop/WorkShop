@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
 import PrivateMenu from "../Molecules/PrivateMenu";
 
@@ -6,9 +7,10 @@ const removeToken = () => {
   localStorage.removeItem("token");
   window.location = "/login";
 };
-const Header = () => {
+const Header = ({ cart }) => {
+  console.log(cart);
   return (
-    <header className="bg-cyan-800 text-white body-font ">
+    <header className="bg-cyan-800 text-white body-font fixed top-0 left-0 right-0 z-20">
       <div className="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
         <NavLink
           to="/"
@@ -34,10 +36,13 @@ const Header = () => {
         {localStorage.getItem("token") ? (
           <div className="flex items-center ">
             <a href="/login" onClick={() => removeToken()}>
-              <button className="inline-flex items-center  border-0  hover:text-red-400 rounded text-base mt-4 md:mt-0 text-stone-100">
+              <button className="inline-flex items-center  border-0  hover:text-red-400 rounded text-base mt-4 md:mt-0 text-stone-100 mr-4">
                 Cerrar Sesión
               </button>
             </a>
+            <button className="button button--dark bg-yellow-500 p-1 px-4 rounded text-slate-900 font-semibold text-xl">
+              🛒 {cart.length}
+            </button>
           </div>
         ) : null}
       </div>
@@ -45,4 +50,9 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  cart: state.cartReducer.coursesCart,
+  priceCart: state.cartReducer.totalPrice,
+});
+
+export default connect(mapStateToProps, {})(Header);

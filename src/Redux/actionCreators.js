@@ -9,8 +9,17 @@ import {
   GET_POST,
   GET_SPECIALITY,
   GET_TEACHER,
+  ADD_TO_CART,
 } from "./actions";
 const API_URL = process.env.REACT_APP_URL_API;
+
+export const addToCart = (id) => {
+    return {
+      type: ADD_TO_CART,
+      id
+    }
+  }
+
 export const getallPosts = () => (dispatch) => {
   Axios.get(`${API_URL}/posts`).then((res) => {
     return dispatch({

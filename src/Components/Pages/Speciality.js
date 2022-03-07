@@ -44,7 +44,7 @@ const Speciality = ({ speciality, teacher }) => {
               <p className="leading-relaxed text-lg mb-4">{speciality?.bio}</p>
 
               <div className="grid grid-cols-2 gap-x-10">
-                <button class="rounded-full bg-cyan-800   text-white">
+                <button className="rounded-full bg-cyan-800   text-white">
                   <a onClick={() => window.alert('Reproduciendo Video')}> Ver Curso </a>
                 </button>
               </div>
