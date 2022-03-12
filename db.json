@@ -172,7 +172,50 @@
       "price": 420
     }
   ],
-  "carrito": [],
+  "carrito": [
+    {
+      "id": 1,
+      "name": "Alemán",
+      "price": 100,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 5,
+      "name": "Italiano",
+      "price": 230,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 4,
+      "name": "Coreano",
+      "price": 250,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 6,
+      "name": "Español",
+      "price": 120,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 3,
+      "name": "Francés",
+      "price": 60,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 2,
+      "name": "Inglés",
+      "price": 20,
+      "category": "Idiomas Modernos"
+    },
+    {
+      "id": 7,
+      "name": "Español",
+      "price": 80,
+      "category": "Idiomas Modernos"
+    }
+  ],
   "signup": [
     {
       "email": "dani@gmail.com",

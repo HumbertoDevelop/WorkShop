@@ -61,6 +61,7 @@ const cartReducer = (state = initialStateCart, action) => {
         category: action.category,
         price: action.price,
       }),
+      totalPrice: state.totalPrice + action.price,
     };
   }
   if (action.type === REMOVE_FROM_CART) {
