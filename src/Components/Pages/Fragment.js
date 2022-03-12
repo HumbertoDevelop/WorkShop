@@ -2,7 +2,7 @@ import React from "react";
 
 const Fragment = () => {
   return (
-    <div className="ed-grid">
+    <div className="">
       <h1>Clase </h1>
     </div>
   );

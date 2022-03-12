@@ -2,39 +2,73 @@
   "especialidades": [
     {
       "id": 1,
-      "name": "Aleman",
+      "name": "Alemán",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Alejandro Magno",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 100
     },
     {
       "id": 2,
-      "name": "Ingles",
+      "name": "Inglés",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Alejandro Velazquéz",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 20
     },
     {
       "id": 3,
-      "name": "Frances",
+      "name": "Francés",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Alejandro García",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 60
     },
     {
       "id": 4,
-      "name": "Koreano",
+      "name": "Coreano",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Alejandro Peréz",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 250
     },
     {
       "id": 5,
       "name": "Italiano",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Daniel Moya",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 230
     },
     {
       "id": 6,
       "name": "Español",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Humberto García",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 120
+    },
+    {
+      "id": 7,
+      "name": "Español",
+      "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
+      "category": "Idiomas Modernos",
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Alejandro Rosales",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 80
     }
   ],
   "profesores": [
@@ -50,28 +84,28 @@
       "name": "Daniel Moya",
       "country": "Venezuela",
       "picture": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
-      "speciality": "Ingles"
+      "speciality": "Inglés"
     },
     {
       "id": 3,
       "name": "Daniel Moya",
       "country": "Venezuela",
       "picture": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
-      "speciality": "Frances"
+      "speciality": "Francés"
     },
     {
       "id": 4,
       "name": "Daniel Moya",
       "country": "Venezuela",
       "picture": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
-      "speciality": "Aleman"
+      "speciality": "Alemán"
     },
     {
       "id": 5,
       "name": "Daniel Moya",
       "country": "Venezuela",
       "picture": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
-      "speciality": "Koreano"
+      "speciality": "Coreano"
     },
     {
       "id": 6,
@@ -88,31 +122,43 @@
       "category": "Idiomas Modernos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Humberto García",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 10
     },
     {
       "id": 2,
-      "name": "Koreano",
+      "name": "Coreano",
       "category": "Idiomas Modernos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Humberto Rodriguez",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 220
     },
     {
       "id": 3,
-      "name": "Frances",
+      "name": "Francés",
       "category": "Idiomas Modernos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Daniel Moya",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 320
     },
     {
       "id": 4,
-      "name": "Aleman",
+      "name": "Alemán",
       "category": "Idiomas Modernos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Pedro Goméz",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 520
     },
     {
       "id": 5,
@@ -120,41 +166,21 @@
       "category": "Idiomas Modernos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    },
-    {
-      "id": 6,
-      "name": "Español",
-      "category": "Idiomas Modernos",
-      "content": "Photo booth fam kinfolk cold-pressed.",
-      "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
+      "teacher": "Humberto Rojas",
+      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "price": 420
     }
+  ],
+  "carrito": [
+   
   ],
   "signup": [
     {
-      "email": "humbertodev14@gmail.com",
-      "name": "Humberto García",
-      "password": "25877089",
-      "id": 1
-    },
-    {
       "email": "dani@gmail.com",
-      "name": "dani",
+      "name": "Daniel Moya",
       "password": "123",
-      "id": 2
-    },
-    {
-      "email": "lysblancherose@gmail.com",
-      "name": "Leovelys Rosas",
-      "password": "12345",
-      "id": 3
-    },
-    {
-      "email": "leogarciadj@gmail.com",
-      "name": "Leonardo",
-      "password": "159",
-      "id": 4
+      "id": 1
     }
   ],
   "posts": [

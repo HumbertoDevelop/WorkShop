@@ -5,15 +5,14 @@ import store from "../../Redux/store";
 import Banner from "../Organims/Banner";
 import Card from "../Organims/Card";
 
-const Specialities = ({specialities }) => {
+const Specialities = ({ specialities }) => {
   useEffect(() => {
     store.dispatch(getallSpecialities());
-  },[]);
+    
+  }, []);
   return (
-    <div >
+    <div>
       <Banner
-      colorFrom='from-red-900'
-      colorTo="to-gray-900"
         image={{
           src: "https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Especialidades",
@@ -22,8 +21,7 @@ const Specialities = ({specialities }) => {
         subtitle="Domina una tecnologia con las rutas de aprendizaje que te ofrecemos"
         specialities
       />
-      {
-      specialities && (
+      {specialities && (
         <section className="text-gray-400 body-font bg-gray-900">
           <div className="container px-5 py-20 mx-auto">
             <div className="flex flex-wrap -m-4">
@@ -32,7 +30,11 @@ const Specialities = ({specialities }) => {
                   key={s.id}
                   picture={s.picture}
                   name={s.name}
+                  category={s.category}
                   cardId={s.id}
+                  price={s.price}
+                  teacher={s.teacher}
+                  pictureTeacher={s.pictureTeacher}
                   path="especialidades"
                 />
               ))}

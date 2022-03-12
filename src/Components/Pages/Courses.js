@@ -12,8 +12,6 @@ const Courses = ({ courses }) => {
   return (
     <>
       <Banner
-        colorFrom='from-violet-900'
-        colorTo="to-gray-900"
         image={{
           src: "https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Banner Cursos",
@@ -30,9 +28,13 @@ const Courses = ({ courses }) => {
                 <Card
                   key={c.id}
                   picture={c.picture}
+                  category={c.category}
                   name={c.name}
+                  price={c.price}
                   path="cursos"
                   cardId={c.id}
+                  teacher={c.teacher}
+                  pictureTeacher={c.pictureTeacher}
                 />
               ))}
             </div>

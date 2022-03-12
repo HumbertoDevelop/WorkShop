@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  REMOVE_FROM_CART,
   GET_ALL_COURSES,
   GET_ALL_POSTS,
   GET_ALL_SPECIALITIES,
@@ -45,20 +46,31 @@ const specialitiesReducer = (state = {}, action) => {
   return state;
 };
 
-const courseObj = { courseName: "", coursePrice: 0 };
 const initialStateCart = {
   coursesCart: [],
   totalPrice: 0,
 };
 
 const cartReducer = (state = initialStateCart, action) => {
-  
   if (action.type === ADD_TO_CART) {
     return {
       ...state,
-      addCart: action.addCart,
+      course: state.coursesCart.push({
+        id: action.id,
+        name: action.name,
+        category: action.category,
+        price: action.price,
+      }),
     };
   }
+  if (action.type === REMOVE_FROM_CART) {
+    let idPos = state.coursesCart.indexOf(action.id);
+    return {
+      ...state,
+      course: state.coursesCart.splice(idPos, 1),
+    };
+  }
+
   return state;
 };
 

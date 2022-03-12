@@ -15,6 +15,7 @@ import NotFound from "./Pages/404";
 import Header from "./Organims/Header";
 import Footer from "./Organims/Footer";
 import "./App.css";
+import Cart from "./Pages/Cart";
 const App = () => {
   return (
     <div>
@@ -65,6 +66,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <Teachers />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/carrito"
+          element={
+            <ProtectedRoute>
+              <Cart />
             </ProtectedRoute>
           }
         />

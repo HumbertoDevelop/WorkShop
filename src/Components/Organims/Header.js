@@ -8,7 +8,6 @@ const removeToken = () => {
   window.location = "/login";
 };
 const Header = ({ cart }) => {
-  console.log(cart);
   return (
     <header className="bg-cyan-800 text-white body-font fixed top-0 left-0 right-0 z-20">
       <div className="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
@@ -36,12 +35,12 @@ const Header = ({ cart }) => {
         {localStorage.getItem("token") ? (
           <div className="flex items-center ">
             <a href="/login" onClick={() => removeToken()}>
-              <button className="inline-flex items-center  border-0  hover:text-red-400 rounded text-base mt-4 md:mt-0 text-stone-100 mr-4">
+              <button className="inline-flex items-center  border-0  hover:text-yellow-500 rounded text-base mt-4 md:mt-0 text-stone-100 mr-4">
                 Cerrar Sesión
               </button>
             </a>
             <button className="button button--dark bg-yellow-500 p-1 px-4 rounded text-slate-900 font-semibold text-xl">
-              🛒 {cart.length}
+              <NavLink to='/carrito'>🛒 {cart.length}</NavLink>
             </button>
           </div>
         ) : null}
@@ -52,7 +51,7 @@ const Header = ({ cart }) => {
 
 const mapStateToProps = (state) => ({
   cart: state.cartReducer.coursesCart,
-  priceCart: state.cartReducer.totalPrice,
+  stte: state.cartReducer,
 });
 
 export default connect(mapStateToProps, {})(Header);

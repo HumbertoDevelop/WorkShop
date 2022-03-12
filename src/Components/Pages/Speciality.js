@@ -23,10 +23,7 @@ const Speciality = ({ speciality, teacher }) => {
           <div className="flex flex-col sm:flex-row mt-10">
             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
               <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
-                <img
-                  src={teacher?.picture}
-                  alt={teacher?.name}
-                />
+                <img src={teacher?.picture} alt={teacher?.name} />
               </div>
               <div className="flex flex-col items-center text-center justify-center">
                 <h2 className="font-medium title-font mt-4 text-white text-lg">
@@ -45,7 +42,10 @@ const Speciality = ({ speciality, teacher }) => {
 
               <div className="grid grid-cols-2 gap-x-10">
                 <button className="rounded-full bg-cyan-800   text-white">
-                  <a onClick={() => window.alert('Reproduciendo Video')}> Ver Curso </a>
+                  <a onClick={() => window.alert("Reproduciendo Video")}>
+                    {" "}
+                    Ver Curso{" "}
+                  </a>
                 </button>
               </div>
             </div>
@@ -55,7 +55,6 @@ const Speciality = ({ speciality, teacher }) => {
     </section>
   );
 };
-
 const mapStateToProps = (state) => ({
   speciality: state.specialitiesReducer.speciality,
   teacher: state.teachersReducer.teacher,

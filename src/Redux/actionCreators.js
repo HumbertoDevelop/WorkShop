@@ -1,4 +1,4 @@
-import  Axios  from "axios";
+import Axios from "axios";
 import {
   GET_ALL_COURSES,
   GET_ALL_POSTS,
@@ -14,11 +14,11 @@ import {
 const API_URL = process.env.REACT_APP_URL_API;
 
 export const addToCart = (id) => {
-    return {
-      type: ADD_TO_CART,
-      id
-    }
-  }
+  return {
+    type: ADD_TO_CART,
+    id,
+  };
+};
 
 export const getallPosts = () => (dispatch) => {
   Axios.get(`${API_URL}/posts`).then((res) => {
@@ -70,7 +70,6 @@ export const getPost = (id) => (dispatch) => {
 };
 export const getSpeciality = (id) => (dispatch) => {
   Axios.get(`${API_URL}/especialidades/${id}`).then((res) => {
-    console.log(id,dispatch);
     return dispatch({
       type: GET_SPECIALITY,
       speciality: res.data,
