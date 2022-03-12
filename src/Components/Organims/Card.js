@@ -22,7 +22,6 @@ const Card = ({
   const itemBuy = () => {
     setBuy(!buy);
   };
-
   const auth = () => {
     Axios.get(`${process.env.REACT_APP_URL_API}/carrito`)
       .then((r) => {
@@ -32,9 +31,9 @@ const Card = ({
             if (ar.hasOwnProperty.call(ar, key)) {
               const element = ar[key];
               if (key === "cardId" && element === cardId) {
-                return setCart2(true);
+                return  false;
               } else {
-                return setCart2(false);
+                return  true;
               }
             }
           }
@@ -46,14 +45,14 @@ const Card = ({
   const addtoCart = () => {
     dispatch({ type: ADD_TO_CART, id: cardId, name, price, category });
     Axios.post(`${process.env.REACT_APP_URL_API}/carrito`, {
-      id: cardId,
-      name,
-      price,
-      category,
-    }).catch((e) => console.error(e));
-    setCart2(!cart2);
-  };
-
+        id: cardId,
+        name,
+        price,
+        category,
+      }).catch((e) => console.error(e));
+      setCart2(!cart2);
+    };
+    
   const removefromCart = () => {
     dispatch({ type: REMOVE_FROM_CART, id: cardId, name });
     Axios.delete(`${process.env.REACT_APP_URL_API}/carrito/${cardId}`)
@@ -64,7 +63,7 @@ const Card = ({
 
   return (
     <>
-      {cart2 ? (
+      { cart2 ? (
        <div className="xl:w-1/3 md:w-1/2 p-4 grayscale">
        <div className="bg-gray-800 bg-opacity-40 p-4 rounded-lg">
          <Link to={`/${path}/${cardId}`}>
@@ -93,7 +92,7 @@ const Card = ({
                onClick={() => removefromCart()}
                className="rounded-full bg-cyan-800  p-2 w-max text-white"
              >
-               Agregar al Carrito
+               Quitar del carrito
              </button>
            </div>
          </div>
