@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  BULK_ADD_TO_CART,
   REMOVE_FROM_CART,
   GET_ALL_COURSES,
   GET_ALL_POSTS,
@@ -62,6 +63,15 @@ const cartReducer = (state = initialStateCart, action) => {
         price: action.price,
       }),
       totalPrice: state.totalPrice + action.price,
+    };
+  }
+  if (action.type === BULK_ADD_TO_CART) {
+    return {
+      ...state,
+      coursesCart: [
+          ...state.coursesCart,
+          ...action.payload,
+      ]
     };
   }
   if (action.type === REMOVE_FROM_CART) {
