@@ -85,7 +85,7 @@ const cartReducer = (state = initialStateCart, action) => {
           totalPrice: state.totalPrice - action.price,
         };
       } else {
-        state.totalPrice = 0;
+        return state.totalPrice = 0;
       }
 
     default:
