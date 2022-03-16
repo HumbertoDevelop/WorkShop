@@ -2,21 +2,23 @@ import React from "react";
 import { connect } from "react-redux";
 import ItemTd from "../Molecules/ItemTd";
 
-const Cart = ({ items, total }) => {
+const Cart = ({ items, total, s }) => {
+  console.log(s);
+  
   return (
-    <section className="text-gray-600 body-font ">
-      <div className="container px-5 py-24 mx-auto min-h-screen">
-        <div className="flex flex-col text-center w-full mb-10 ">
+    <section className="text-gray-600 body-font min-h-screen flex items-center">
+      <div className="container  mx-auto ">
+        <div className="flex flex-col  text-center w-full  ">
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
             Carrito
           </h1>
         </div>
-        <div className="lg:w-2/3  w-full mx-auto overflow-auto">
-          <table className="table-auto w-full text-left whitespace-no-wrap ">
+        <div className="lg:w-2/3 w-full mx-auto overflow-auto">
+          <table className="table-auto w-full text-center whitespace-no-wrap  bg-yellow-500">
             <thead>
               <tr>
                 <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 rounded-tl rounded-bl text-center">
-                  Id curso/especialidad
+                  #Cod
                 </th>
                 <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800">
                   Nombre
@@ -27,32 +29,34 @@ const Cart = ({ items, total }) => {
                 <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800">
                   Precio
                 </th>
-                <th className="w-10 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 rounded-tr rounded-br"></th>
+                <th className="w-10 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 rounded-tr rounded-br">
+                  🗑
+                </th>
               </tr>
             </thead>
             {items && (
               <tbody>
-                {items.map((i) => (
+                {items.map(({ id, name, category, price }) => (
                   <ItemTd
-                    key={i.id}
-                    id={i.id}
-                    name={i.name}
-                    category={i.category}
-                    price={i.price}
+                    key={id}
+                    id={id}
+                    name={name}
+                    category={category}
+                    price={price}
                   />
                 ))}
               </tbody>
             )}
           </table>
         </div>
-        <div className="flex justify-between  pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+        <div className="flex justify-between pl-4 lg:w-2/3 w-full mx-auto bg-cyan-800 p-2">
           <button
-            onClick={() => alert(`!Compra Exitpsa!`)}
-            className=" text-stale font-semibold bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-cyan-800 hover:text-white rounded"
+            onClick={() => alert(`!Compra Exitosa!`)}
+            className=" text-slate-900 font-semibold bg-yellow-500 border-0 py-1 px-4  focus:outline-none hover:bg-yellow-600 hover:text-white rounded"
           >
             Buy
           </button>
-          <div className="flex items-center ">
+          <div className="flex items-center text-white">
             <p>Total: ${total}</p>
           </div>
         </div>
@@ -64,6 +68,7 @@ const Cart = ({ items, total }) => {
 const mapStateToProps = (state) => ({
   items: state.cartReducer.coursesCart,
   total: state.cartReducer.totalPrice,
+  s: state.cartReducer,
 });
 
 export default connect(mapStateToProps, {})(Cart);

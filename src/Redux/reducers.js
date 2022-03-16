@@ -14,37 +14,41 @@ import {
 } from "./actions";
 
 const postsReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_POSTS) {
-    return {
-      ...state,
-      posts: action.posts,
-    };
-  }
+  switch (action.type) {
+    case GET_ALL_POSTS:
+      return {
+        ...state,
+        posts: action.posts,
+      };
 
-  if (action.type === GET_POST) {
-    return {
-      ...state,
-      post: action.post,
-    };
+    case GET_POST:
+      return {
+        ...state,
+        post: action.post,
+      };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 const specialitiesReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_SPECIALITIES) {
-    return {
-      ...state,
-      specialities: action.specialities,
-    };
-  }
+  switch (action.type) {
+    case GET_ALL_SPECIALITIES:
+      return {
+        ...state,
+        specialities: action.specialities,
+      };
 
-  if (action.type === GET_SPECIALITY) {
-    return {
-      ...state,
-      speciality: action.speciality,
-    };
+    case GET_SPECIALITY:
+      return {
+        ...state,
+        speciality: action.speciality,
+      };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 const initialStateCart = {
@@ -53,79 +57,92 @@ const initialStateCart = {
 };
 
 const cartReducer = (state = initialStateCart, action) => {
-  if (action.type === ADD_TO_CART) {
-    return {
-      ...state,
-      course: state.coursesCart.push({
-        id: action.id,
-        name: action.name,
-        category: action.category,
-        price: action.price,
-      }),
-      totalPrice: state.totalPrice + action.price,
-    };
-  }
-  if (action.type === BULK_ADD_TO_CART) {
-    return {
-      ...state,
-      coursesCart: [
-          ...state.coursesCart,
-          ...action.payload,
-      ]
-    };
-  }
-  if (action.type === REMOVE_FROM_CART) {
-    let idPos = state.coursesCart.indexOf(action.id);
-    return {
-      ...state,
-      course: state.coursesCart.splice(idPos, 1),
-    };
-  }
+  switch (action.type) {
+    case BULK_ADD_TO_CART:
+      return {
+        ...state,
+        coursesCart: action.payload,
+      };
 
-  return state;
+    case ADD_TO_CART:
+      return {
+        ...state,
+        course: state.coursesCart.push({
+          id: action.id,
+          name: action.name,
+          price: action.price,
+          category: action.category,
+        }),
+        totalPrice: state.totalPrice + action.price,
+      };
+
+    case REMOVE_FROM_CART:
+      if (state.totalPrice !== 0) {
+        let idPos = state.coursesCart.indexOf(action.id);
+        return {
+          ...state,
+          course: state.coursesCart.splice(idPos, 1),
+          totalPrice: state.totalPrice - action.price,
+        };
+      } else {
+        state.totalPrice = 0;
+      }
+
+    default:
+      return state;
+  }
 };
 
 const coursesReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_COURSES) {
-    return {
-      ...state,
-      courses: action.courses,
-    };
-  }
+  switch (action.type) {
+    case GET_ALL_COURSES:
+      return {
+        ...state,
+        courses: action.courses,
+      };
 
-  if (action.type === GET_COURSE) {
-    return {
-      ...state,
-      course: action.course,
-    };
+    case GET_COURSE:
+      return {
+        ...state,
+        course: action.course,
+      };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 const teachersReducer = (state = {}, action) => {
-  if (action.type === GET_ALL_TEACHERS) {
-    return {
-      ...state,
-      teachers: action.teachers,
-    };
-  }
-  if (action.type === GET_TEACHER) {
-    return {
-      ...state,
-      teacher: action.teacher,
-    };
-  }
+  switch (action.type) {
+    case GET_ALL_TEACHERS:
+      return {
+        ...state,
+        teachers: action.teachers,
+      };
 
-  return state;
+    case GET_TEACHER:
+      return {
+        ...state,
+        teacher: action.teacher,
+      };
+
+    default:
+      return state;
+  }
 };
 const fragmentReducer = (state = {}, action) => {
-  if (action.type === GET_FRAGMENT) {
-    return {
-      ...state,
-      fragment: action.fragment,
-    };
+  switch (action.type) {
+    
+
+    case GET_FRAGMENT:
+      return {
+        ...state,
+        fragment: action.fragment,
+      };
+
+    default:
+      return state;
   }
-  return state;
 };
 
 export {

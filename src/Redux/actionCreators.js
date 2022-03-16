@@ -10,16 +10,26 @@ import {
   GET_SPECIALITY,
   GET_TEACHER,
   ADD_TO_CART,
+  BULK_ADD_TO_CART,
+  REMOVE_FROM_CART,
 } from "./actions";
 const API_URL = process.env.REACT_APP_URL_API;
 
-export const addToCart = (id) => {
-  return {
-    type: ADD_TO_CART,
-    id,
-  };
+export const addToCart = (id, name, price, category) => (dispatch) => {
+  return dispatch({ type: ADD_TO_CART, id, name, price, category });
 };
 
+export const removeFromCart = (id, name, price, category) => (dispatch) => {
+  return dispatch({ type: REMOVE_FROM_CART, id, name, price, category });
+};
+
+export const bulkCart = () => (dispatch) => {
+  Axios.get(`${API_URL}/carrito`)
+    .then(({ data }) => {
+      return dispatch({ type: BULK_ADD_TO_CART, payload: data });
+    })
+    .catch((e) => console.error(e));
+};
 export const getallPosts = () => (dispatch) => {
   Axios.get(`${API_URL}/posts`).then((res) => {
     return dispatch({

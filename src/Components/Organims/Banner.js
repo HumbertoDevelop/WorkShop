@@ -18,7 +18,7 @@ const Banner = ({
         <div
           className={`body-font bg-gradient-to-t ${colorFrom} ${colorTo} bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96 grid items-center blur-sm `}
         ></div>
-        <div className="container  mx-auto flex flex-wrap items-center justify-between absolute top-1/4 left-0 right-0 ">
+        <div className="container  mx-auto flex flex-wrap items-center  justify-between absolute top-1/4 left-0 right-0 ">
           <h2 className="sm:text-3xl text-2xl font-medium title-font mb-2 md:w-2/5 ">
             {title}
           </h2>

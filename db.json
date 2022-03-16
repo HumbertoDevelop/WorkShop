@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Alemán",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Alejandro Magno",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -12,9 +12,9 @@
     },
     {
       "id": 2,
-      "name": "Inglés",
+      "name": "Francés",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Alejandro Velazquéz",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -22,9 +22,9 @@
     },
     {
       "id": 3,
-      "name": "Francés",
+      "name": "Español",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Alejandro García",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -34,7 +34,7 @@
       "id": 4,
       "name": "Coreano",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Alejandro Peréz",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -44,7 +44,7 @@
       "id": 5,
       "name": "Italiano",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Daniel Moya",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
@@ -52,23 +52,13 @@
     },
     {
       "id": 6,
-      "name": "Español",
+      "name": "Inglés",
       "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
+      "category": "Especialidades",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
       "teacher": "Humberto García",
       "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
       "price": 120
-    },
-    {
-      "id": 7,
-      "name": "Español",
-      "picture": "https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
-      "category": "Idiomas Modernos",
-      "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
-      "teacher": "Alejandro Rosales",
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-      "price": 80
     }
   ],
   "profesores": [
@@ -119,7 +109,7 @@
     {
       "id": 1,
       "name": "Español",
-      "category": "Idiomas Modernos",
+      "category": "Cursos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
@@ -130,7 +120,7 @@
     {
       "id": 2,
       "name": "Coreano",
-      "category": "Idiomas Modernos",
+      "category": "Cursos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
@@ -141,7 +131,7 @@
     {
       "id": 3,
       "name": "Francés",
-      "category": "Idiomas Modernos",
+      "category": "Cursos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
@@ -152,7 +142,7 @@
     {
       "id": 4,
       "name": "Alemán",
-      "category": "Idiomas Modernos",
+      "category": "Cursos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
@@ -163,7 +153,7 @@
     {
       "id": 5,
       "name": "Italiano",
-      "category": "Idiomas Modernos",
+      "category": "Cursos",
       "content": "Photo booth fam kinfolk cold-pressed.",
       "picture": "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000",
       "pictureTeacher": "https://cdn.pixabay.com/photo/2016/03/27/17/42/man-1283235_960_720.jpg",
@@ -172,50 +162,7 @@
       "price": 420
     }
   ],
-  "carrito": [
-    {
-      "id": 1,
-      "name": "Alemán",
-      "price": 100,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 5,
-      "name": "Italiano",
-      "price": 230,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 4,
-      "name": "Coreano",
-      "price": 250,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 6,
-      "name": "Español",
-      "price": 120,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 3,
-      "name": "Francés",
-      "price": 60,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 2,
-      "name": "Inglés",
-      "price": 20,
-      "category": "Idiomas Modernos"
-    },
-    {
-      "id": 7,
-      "name": "Español",
-      "price": 80,
-      "category": "Idiomas Modernos"
-    }
-  ],
+  "carrito": [],
   "signup": [
     {
       "email": "dani@gmail.com",

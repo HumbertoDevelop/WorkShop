@@ -7,10 +7,12 @@ const removeToken = () => {
   localStorage.removeItem("token");
   window.location = "/login";
 };
-const Header = ({ cart }) => {
+const Header = ({ cart, s }) => {
+  console.log(s);
+  
   return (
     <header className="bg-cyan-800 text-white body-font fixed top-0 left-0 right-0 z-20">
-      <div className="container mx-auto flex flex-wrap py-2 flex-col md:flex-row items-center">
+      <div className="container mx-auto flex  py-2 flex-col md:flex-row items-center">
         <NavLink
           to="/"
           className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
@@ -51,7 +53,7 @@ const Header = ({ cart }) => {
 
 const mapStateToProps = (state) => ({
   cart: state.cartReducer.coursesCart,
-  stte: state.cartReducer,
+  s: state.cartReducer,
 });
 
 export default connect(mapStateToProps, {})(Header);

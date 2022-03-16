@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { ADD_TO_CART, BULK_ADD_TO_CART, REMOVE_FROM_CART } from '../../Redux/actions';
-import Axios from "axios";
-import axios from 'axios';
+import {
+  addToCart,
+  bulkCart,
+  removeFromCart,
+} from "../../Redux/actionCreators";
+import axios from "axios";
 
 const Card = ({
   picture,
@@ -18,37 +21,53 @@ const Card = ({
 }) => {
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    updateCart();
+  }, []);
+
   const updateCart = () => {
-    axios.get(`${process.env.REACT_APP_URL_API}/carrito`)
-        .then(({ data }) => {
-          dispatch({ type: BULK_ADD_TO_CART, payload: data });
-        })
-        .catch((e) => console.error(e));
+    return new Promise(() => {
+      setTimeout(() => {
+        dispatch(bulkCart());
+      }, 0);
+    });
   };
 
-  const addToCart = () => {
-    dispatch({ type: ADD_TO_CART, id: cardId, name, price, category });
-    Axios.post(`${process.env.REACT_APP_URL_API}/carrito`, {
-        id: cardId,
-        name,
-        price,
-        category,
+  const addtoCart = async () => {
+    dispatch(addToCart(cardId, name, price, category));
+    await axios.post(`${process.env.REACT_APP_URL_API}/carrito`, {
+      id: cardId,
+      name,
+      price,
+      category,
+    })
+      .then(() => {
+        updateCart();
       })
-        .then(() => updateCart())
-        .catch((e) => console.error(e));
-    };
-
-  const removeFromCart = () => {
-    dispatch({ type: REMOVE_FROM_CART, id: cardId, name });
-    Axios.delete(`${process.env.REACT_APP_URL_API}/carrito/${cardId}`)
-      .then((res) => updateCart())
-      .catch((e) => console.error(e))
+      .catch((e) => console.error(e));
   };
-  const isProductInCart = cart.some(product => product.id === cardId);
+
+  const removefromCart = async () => {
+    dispatch(removeFromCart(cardId, name, price, category));
+    await axios.delete(`${process.env.REACT_APP_URL_API}/carrito/${cardId}`)
+      .then(() => updateCart())
+      .catch((e) => console.error(e));
+  };
+  const isProductInCart = cart.some(
+    (product) =>
+      product.id === cardId &&
+      product.name === name &&
+      product.price === price &&
+      product.category === category
+  );
 
   return (
     <>
-      <div className={`xl:w-1/3 md:w-1/2 p-4 ${isProductInCart ? 'grayscale' : ''}`}>
+      <div
+        className={`xl:w-1/3 md:w-1/2 p-4 ${
+          isProductInCart ? "grayscale" : ""
+        }`}
+      >
         <div className="bg-gray-800 bg-opacity-40 p-4 rounded-lg">
           <Link to={`/${path}/${cardId}`}>
             <img src={picture} alt={name} />
@@ -63,20 +82,22 @@ const Card = ({
           <div>
             <div className="my-2 flex items-center justify-around">
               <img
-                  src={pictureTeacher}
-                  className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                  alt={teacher}
+                src={pictureTeacher}
+                className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                alt={teacher}
               />
               <p>{teacher}</p>
 
-              <p className="mt-1 line-through">{price}$</p>
+              <p className={`mt-1 ${isProductInCart ? "line-through" : ""}`}>
+                {price}$
+              </p>
             </div>
             <div className="grid grid-cols-2 gap-y-1 gap-x-5 text-sm pt-2">
               <button
-                  onClick={isProductInCart ? removeFromCart : addToCart}
-                  className="rounded-full bg-cyan-800  p-2 w-max text-white"
+                onClick={isProductInCart ? removefromCart : addtoCart}
+                className="rounded-full bg-cyan-800  p-2 w-max text-white"
               >
-                {isProductInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
+                {isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
               </button>
             </div>
           </div>
@@ -91,3 +112,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {})(Card);
+

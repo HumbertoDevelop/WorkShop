@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./Routes/Protected";
@@ -16,22 +16,18 @@ import Header from "./Organims/Header";
 import Footer from "./Organims/Footer";
 import "./App.css";
 import Cart from "./Pages/Cart";
-import axios from 'axios';
-import { BULK_ADD_TO_CART } from '../Redux/actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
+import { bulkCart } from "../Redux/actionCreators";
 
 const App = () => {
-    const dispatch = useDispatch();
-    const updateCart = () => {
-        axios.get(`${process.env.REACT_APP_URL_API}/carrito`)
-            .then(({ data }) => {
-                dispatch({ type: BULK_ADD_TO_CART, payload: data });
-            })
-        .catch((e) => console.error(e));
-    };
-    useEffect(() => {
-        updateCart();
-    },[]);
+  const dispatch = useDispatch();
+  const updateCart = () => {
+    dispatch(bulkCart());
+  };
+  useEffect(() => {
+    updateCart();
+  }, []);
+  
   return (
     <div>
       <Header />
