@@ -2,23 +2,22 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Banner = ({
-  image,
   title,
   subtitle,
   home,
-  colorFrom,
-  colorTo,
   specialities,
   courses,
   teachers,
+  cart,
+  image
 }) => (
   <div>
     {home ? (
       <section>
         <div
-          className={`body-font bg-gradient-to-t ${colorFrom} ${colorTo} bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96 grid items-center blur-sm `}
+          className={`body-font  bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96  blur-sm `}
         ></div>
-        <div className="container  mx-auto flex flex-wrap items-center  justify-between absolute top-1/4 left-0 right-0 ">
+        <div className="container mx-auto flex flex-wrap items-center  justify-between absolute top-1/4 left-0 right-0 pl-4">
           <h2 className="sm:text-3xl text-2xl font-medium title-font mb-2 md:w-2/5 ">
             {title}
           </h2>
@@ -39,7 +38,7 @@ const Banner = ({
     ) : specialities ? (
       <section>
         <div
-          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+          className={`  body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
         ></div>
         <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/4 left-0 right-0">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
@@ -55,7 +54,7 @@ const Banner = ({
     ) : courses ? (
       <section>
         <div
-          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+          className={`  body-font bg-[url('https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
         ></div>
         <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/4 left-0 right-0">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
@@ -71,7 +70,7 @@ const Banner = ({
     ) : teachers ? (
       <section>
         <div
-          className={` bg-gradient-to-t ${colorFrom} ${colorTo} body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
+          className={`  body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center blur-sm`}
         ></div>
         <div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/4 left-0 right-0">
           <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">

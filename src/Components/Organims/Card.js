@@ -71,10 +71,10 @@ const Card = ({
         <div className="bg-gray-800 bg-opacity-40 p-4 rounded-lg">
           <Link to={`/${path}/${cardId}`}>
             <img src={picture} alt={name} />
-          </Link>
           <h2 className="text-lg text-white font-medium title-font mb-4">
             {name}
           </h2>
+          </Link>
           <p className="leading-relaxed text-base">
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
@@ -83,6 +83,8 @@ const Card = ({
             <div className="my-2 flex items-center justify-around">
               <img
                 src={pictureTeacher}
+
+                
                 className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                 alt={teacher}
               />
@@ -95,7 +97,7 @@ const Card = ({
             <div className="grid grid-cols-2 gap-y-1 gap-x-5 text-sm pt-2">
               <button
                 onClick={isProductInCart ? removefromCart : addtoCart}
-                className="rounded-full bg-cyan-800  p-2 w-max text-white"
+                className="rounded-full bg-cyan-800  p-2 w-max text-white hover:bg-yellow-500 hover:text-slate-900"
               >
                 {isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
               </button>

@@ -2,14 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import ItemTd from "../Molecules/ItemTd";
 
-const Cart = ({ items, total, s }) => {
-  console.log(s);
+const Cart = ({ items, total}) => {
   
   return (
-    <section className="text-gray-600 body-font min-h-screen flex items-center">
-      <div className="container  mx-auto ">
-        <div className="flex flex-col  text-center w-full  ">
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">
+   
+    <section className=" body-font min-h-screen flex items-center className={`  body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center`}">
+      <div className="container mx-auto ">
+        <div className="flex flex-col  text-center w-full">
+          <h1 className="text-white sm:text-4xl text-3xl font-medium title-font mb-2 ">
             Carrito
           </h1>
         </div>
@@ -38,12 +38,12 @@ const Cart = ({ items, total, s }) => {
               <tbody>
                 {items.map(({ id, name, category, price }) => (
                   <ItemTd
-                    key={id}
+                  key={id}
                     id={id}
                     name={name}
                     category={category}
                     price={price}
-                  />
+                    />
                 ))}
               </tbody>
             )}
@@ -53,7 +53,7 @@ const Cart = ({ items, total, s }) => {
           <button
             onClick={() => alert(`!Compra Exitosa!`)}
             className=" text-slate-900 font-semibold bg-yellow-500 border-0 py-1 px-4  focus:outline-none hover:bg-yellow-600 hover:text-white rounded"
-          >
+            >
             Buy
           </button>
           <div className="flex items-center text-white">
@@ -68,7 +68,6 @@ const Cart = ({ items, total, s }) => {
 const mapStateToProps = (state) => ({
   items: state.cartReducer.coursesCart,
   total: state.cartReducer.totalPrice,
-  s: state.cartReducer,
 });
 
 export default connect(mapStateToProps, {})(Cart);

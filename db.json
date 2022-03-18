@@ -162,7 +162,14 @@
       "price": 420
     }
   ],
-  "carrito": [],
+  "carrito": [
+    {
+      "id": 2,
+      "name": "Coreano",
+      "price": 220,
+      "category": "Cursos"
+    }
+  ],
   "signup": [
     {
       "email": "dani@gmail.com",

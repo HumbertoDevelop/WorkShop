@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" bg-cyan-800  body-font">
-      <div className="container  py-2 mx-auto flex items-center sm:flex-row flex-col ">
+    <footer className=" bg-cyan-800 flex justify-around justify-content-center items-center body-font">
+      <div className="container mx-auto grid grid-cols-2 items-center sm:flex-row flex-col ">
         <p className="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2020 SpeakUpEnglish —
           <a
@@ -15,7 +15,7 @@ const Footer = () => {
             @speakupenglish
           </a>
         </p>
-        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex ml-auto pr-10 sm:mt-0 mt-4 justify-center sm:justify-start">
           <a href="/" className="text-white">
             <svg
               fill="currentColor"

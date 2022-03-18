@@ -44,8 +44,8 @@ const authentication = async (e) => {
 
 const Login = () => {
   return (
-    <section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-36">
-      <div className="container px-5 py-24 mx-auto flex flex-wrap items-center text-slate-900">
+    <section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center h-screen flex items-center">
+      <div className="container px-5 mx-auto flex flex-wrap items-center text-slate-900">
         <div className="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
           <h1 className="title-font font-medium text-3xl ">Bienvenido! ☕</h1>
           <p className="leading-relaxed mt-4">
@@ -70,7 +70,7 @@ const Login = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full bg-cyan-500 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-stale rounded border border-cyan-600 focus:border-cyan text-base outline-none  py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-cyan-500 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-stale rounded border border-cyan-600 focus:border-cyan text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               required
             />
           </div>
