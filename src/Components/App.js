@@ -25,7 +25,7 @@ const App = () => {
       () => {
           dispatch(bulkCart());
       },
-      [dispatch, bulkCart],
+      [dispatch],
   );
 
   useEffect(() => {

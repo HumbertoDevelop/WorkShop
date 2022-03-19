@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import {
@@ -22,9 +22,9 @@ const Card = ({
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
-  const updateCart = () => {
+  const updateCart = useCallback(() => {
     dispatch(bulkCart());
-  };
+  }, [dispatch]);
   useEffect(() => {
     updateCart();
   }, [updateCart]);
