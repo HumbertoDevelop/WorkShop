@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className=" bg-cyan-800  body-font">
       <div className="container mx-auto px-4 flex justify-between items-center sm:flex-row  ">
-        <p className="text-sm w-40 text-white sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+        <p className="text-sm w-40 text-white sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 ">
           © 2020 SpeakUpEnglish —
           <a
             href="https://twitter.com/knyttneve"
@@ -15,7 +15,7 @@ const Footer = () => {
             @speakupenglish
           </a>
         </p>
-        <span className="flex sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="flex sm:mt-0  justify-center items-start sm:justify-start">
           <a href="/" className="text-white">
             <svg
               fill="currentColor"
