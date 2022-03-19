@@ -53,9 +53,8 @@ const specialitiesReducer = (state = {}, action) => {
 
 const initialStateCart = {
   coursesCart: [],
-  totalPrice: 0,
-};
 
+};
 const cartReducer = (state = initialStateCart, action) => {
   switch (action.type) {
     case BULK_ADD_TO_CART:
@@ -73,21 +72,14 @@ const cartReducer = (state = initialStateCart, action) => {
           price: action.price,
           category: action.category,
         }),
-        totalPrice: state.totalPrice + action.price,
       };
 
     case REMOVE_FROM_CART:
-      if (state.totalPrice !== 0) {
-        let idPos = state.coursesCart.indexOf(action.id);
-        return {
-          ...state,
-          course: state.coursesCart.splice(idPos, 1),
-          totalPrice: state.totalPrice - action.price,
-        };
-      } else {
-        return state.totalPrice = 0;
-      }
-
+      let idPos = state.coursesCart.indexOf(action.id);
+      return {
+        ...state,
+        course: state.coursesCart.splice(idPos, 1),
+      };
     default:
       return state;
   }
@@ -132,7 +124,7 @@ const teachersReducer = (state = {}, action) => {
 };
 const fragmentReducer = (state = {}, action) => {
   switch (action.type) {
-    
+
 
     case GET_FRAGMENT:
       return {

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useMemo } from 'react';
 import { connect } from "react-redux";
 import ItemTd from "../Molecules/ItemTd";
 
-const Cart = ({ items, total}) => {
-  
+const Cart = ({ items }) => {
+  const totalPrice = useMemo(() => items.reduce((total, item) => item.price + total, 0), [items]);
   return (
-   
+
     <section className=" body-font min-h-screen flex items-center className={`  body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center`}">
       <div className="container mx-auto ">
         <div className="flex flex-col  text-center w-full">
@@ -57,7 +57,7 @@ const Cart = ({ items, total}) => {
             Buy
           </button>
           <div className="flex items-center text-white">
-            <p>Total: ${total}</p>
+            <p>Total: ${totalPrice}</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,6 @@ const Cart = ({ items, total}) => {
 
 const mapStateToProps = (state) => ({
   items: state.cartReducer.coursesCart,
-  total: state.cartReducer.totalPrice,
 });
 
 export default connect(mapStateToProps, {})(Cart);
