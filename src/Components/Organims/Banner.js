@@ -27,7 +27,7 @@ const Banner = ({
             </div>
             <div className="flex md:mt-4 mt-6">
               <NavLink to="/cursos">
-                <button className="inline-flex text-white bg-cyan-700 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 rounded">
+                <button className="inline-flex text-black bg-yellow-500 border-0 py-1 px-4 focus:outline-none hover:bg-cyan-800 hover:text-white rounded">
                   Ver cursos
                 </button>
               </NavLink>
