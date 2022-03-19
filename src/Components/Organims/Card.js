@@ -68,39 +68,43 @@ const Card = ({
           isProductInCart ? "grayscale" : ""
         }`}
       >
-        <div className="bg-gray-800 bg-opacity-40 p-4 rounded-lg">
+        <div className="bg-cyan-800 bg-opacity-40 p-4 rounded-lg">
           <Link to={`/${path}/${cardId}`}>
             <img src={picture} alt={name} />
-          <h2 className="text-lg text-white font-medium title-font mb-4">
-            {name}
-          </h2>
+          <div className="flex justify-between">
+            <h2 className="text-lg text-white font-medium text-3xl title-font mb-4 pt-4">
+              {name}
+            </h2>
+           <div className="flex align-center my-4">
+             <button
+                 onClick={isProductInCart ? removefromCart : addtoCart}
+                 className="rounded-full hover:bg-cyan-800  p-2 w-max hover:text-white bg-yellow-500 text-slate-900 font-bold px-4"
+             >
+               {isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
+             </button>
+           </div>
+          </div>
           </Link>
           <p className="leading-relaxed text-base">
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
           </p>
           <div>
-            <div className="my-2 flex items-center justify-around">
-              <img
-                src={pictureTeacher}
+            <div className="my-2 flex items-center justify-between">
+              <div className="flex items-center">
+                <img
+                    src={pictureTeacher}
 
-                
-                className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                alt={teacher}
-              />
-              <p>{teacher}</p>
 
-              <p className={`mt-1 ${isProductInCart ? "line-through" : ""}`}>
+                    className="w-12 h-12 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                    alt={teacher}
+                />
+                <p className="text-lg">{teacher}</p>
+              </div>
+
+              <p className={`mt-1 ${isProductInCart ? "line-through" : ""} text-2xl text-yellow-500`}>
                 {price}$
               </p>
-            </div>
-            <div className="grid grid-cols-2 gap-y-1 gap-x-5 text-sm pt-2">
-              <button
-                onClick={isProductInCart ? removefromCart : addtoCart}
-                className="rounded-full bg-cyan-800  p-2 w-max text-white hover:bg-yellow-500 hover:text-slate-900"
-              >
-                {isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
-              </button>
             </div>
           </div>
         </div>
