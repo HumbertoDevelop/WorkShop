@@ -1,21 +1,14 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from 'react';
 import { useDispatch } from "react-redux";
 import { bulkCart, removeFromCart } from "../../Redux/actionCreators";
 import DeleteBtn from "./DeleteBtn";
 
 const ItemTd = ({ id, name, category, price }) => {
   const dispatch = useDispatch();
-    const updateCart = () => {
-        return new Promise(() => {
-            setTimeout(() => {
-                dispatch(bulkCart());
-            }, 0);
-        });
-    };
+  const updateCart = useCallback(() => dispatch(bulkCart()), [dispatch]);
 
-
-    useEffect(() => {
+  useEffect(() => {
     updateCart();
   }, [updateCart]);
 

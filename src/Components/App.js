@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from 'react';
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./Routes/Protected";
@@ -21,9 +21,13 @@ import { bulkCart } from "../Redux/actionCreators";
 
 const App = () => {
   const dispatch = useDispatch();
-  const updateCart = () => {
-    dispatch(bulkCart());
-  };
+  const updateCart = useCallback(
+      () => {
+          dispatch(bulkCart());
+      },
+      [dispatch, bulkCart],
+  );
+
   useEffect(() => {
     updateCart();
   }, [updateCart]);
