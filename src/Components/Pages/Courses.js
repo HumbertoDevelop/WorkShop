@@ -12,10 +12,6 @@ const Courses = ({ courses }) => {
   return (
     <>
       <Banner
-        image={{
-          src: "https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-          alt: "Banner Cursos",
-        }}
         title="Nuestros Cursos"
         subtitle="Comienza desde cero hoy mismo en tu camino a dominar el Ingles"
         courses

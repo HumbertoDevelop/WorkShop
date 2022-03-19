@@ -55,6 +55,7 @@ const initialStateCart = {
   coursesCart: [],
 
 };
+
 const cartReducer = (state = initialStateCart, action) => {
   switch (action.type) {
     case BULK_ADD_TO_CART:

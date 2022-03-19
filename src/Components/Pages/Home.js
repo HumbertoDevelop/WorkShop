@@ -12,12 +12,6 @@ const Home = ({ posts }) => {
   return (
     <>
       <Banner
-        colorFrom="from-yellow-800"
-        colorTo="to-gray-900"
-        image={{
-          src: "https://cdn.pixabay.com/photo/2020/05/05/12/12/coffee-5132832__340.jpg",
-          alt: "Banner Home",
-        }}
         title="Bienvenido a tu lugar ideal para comenzar a hablar ingles!"
         subtitle="Nuestro equipo ha desarrollado esta plataforma pensando en ti"
         home

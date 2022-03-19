@@ -13,10 +13,6 @@ const Specialities = ({ specialities }) => {
   return (
     <div>
       <Banner
-        image={{
-          src: "https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-          alt: "Banner Especialidades",
-        }}
         title="Especialidades"
         subtitle="Domina una tecnologia con las rutas de aprendizaje que te ofrecemos"
         specialities
