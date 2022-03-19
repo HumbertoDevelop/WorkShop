@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 import { connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import {
@@ -19,6 +19,7 @@ const Card = ({
   pictureTeacher,
   category,
 }) => {
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -26,14 +27,11 @@ const Card = ({
   }, []);
 
   const updateCart = () => {
-    return new Promise(() => {
-      setTimeout(() => {
-        dispatch(bulkCart());
-      }, 0);
-    });
+    dispatch(bulkCart());
   };
 
   const addtoCart = async () => {
+    setLoading(true);
     dispatch(addToCart(cardId, name, price, category));
     await axios.post(`${process.env.REACT_APP_URL_API}/carrito`, {
       id: cardId,
@@ -44,14 +42,17 @@ const Card = ({
       .then(() => {
         updateCart();
       })
-      .catch((e) => console.error(e));
+      .catch((e) => console.error(e))
+      .finally(() => setLoading(false));
   };
 
   const removefromCart = async () => {
+    setLoading(true);
     dispatch(removeFromCart(cardId, name, price, category));
     await axios.delete(`${process.env.REACT_APP_URL_API}/carrito/${cardId}`)
       .then(() => updateCart())
-      .catch((e) => console.error(e));
+      .catch((e) => console.error(e))
+      .finally(() => setLoading(false));
   };
   const isProductInCart = cart.some(
     (product) =>
@@ -64,27 +65,29 @@ const Card = ({
   return (
     <>
       <div
-        className={`xl:w-1/3 md:w-1/2 p-4 ${
-          isProductInCart ? "grayscale" : ""
-        }`}
+        className="xl:w-1/3 md:w-1/2 p-4"
       >
         <div className="bg-cyan-800 bg-opacity-40 p-4 rounded-lg">
           <Link to={`/${path}/${cardId}`}>
-            <img src={picture} alt={name} />
-          <div className="flex justify-between">
-            <h2 className="text-lg text-white font-medium text-3xl title-font mb-4 pt-4">
-              {name}
-            </h2>
-           <div className="flex align-center my-4">
-             <button
-                 onClick={isProductInCart ? removefromCart : addtoCart}
-                 className="rounded-full hover:bg-cyan-800  p-2 w-max hover:text-white bg-yellow-500 text-slate-900 font-bold px-4"
-             >
-               {isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
-             </button>
-           </div>
-          </div>
+            <img src={picture} alt={name}/>
           </Link>
+          <div className="flex justify-between">
+            <Link to={`/${path}/${cardId}`}>
+              <h2 className="text-lg text-white font-medium text-3xl title-font mb-4 pt-4">
+                {name}
+              </h2>
+            </Link>
+            <div className="flex align-center my-4">
+              <button
+                  disabled={loading}
+                  onClick={isProductInCart ? removefromCart : addtoCart}
+                  className="rounded-full hover:bg-cyan-800  p-2 w-max hover:text-white bg-yellow-500 text-slate-900 font-bold px-4"
+              >
+                {isProductInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
+                {loading ? '(Loading...)' : null}
+              </button>
+            </div>
+          </div>
           <p className="leading-relaxed text-base">
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
