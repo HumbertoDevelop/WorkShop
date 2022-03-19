@@ -26,8 +26,8 @@ const App = () => {
   };
   useEffect(() => {
     updateCart();
-  }, []);
-  
+  }, [updateCarts]);
+
   return (
     <div  >
       <Header />

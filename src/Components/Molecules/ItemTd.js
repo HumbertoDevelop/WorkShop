@@ -6,17 +6,18 @@ import DeleteBtn from "./DeleteBtn";
 
 const ItemTd = ({ id, name, category, price }) => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    updateCart();
-  }, []);
+    const updateCart = () => {
+        return new Promise(() => {
+            setTimeout(() => {
+                dispatch(bulkCart());
+            }, 0);
+        });
+    };
 
-  const updateCart = () => {
-    return new Promise(() => {
-      setTimeout(() => {
-        dispatch(bulkCart());
-      }, 0);
-    });
-  };
+
+    useEffect(() => {
+    updateCart();
+  }, [updateCart]);
 
   const removefromCart = async () => {
     dispatch(removeFromCart(id, name, price, category));

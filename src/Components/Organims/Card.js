@@ -22,13 +22,12 @@ const Card = ({
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    updateCart();
-  }, []);
-
   const updateCart = () => {
     dispatch(bulkCart());
   };
+  useEffect(() => {
+    updateCart();
+  }, [updateCart]);
 
   const addtoCart = async () => {
     setLoading(true);

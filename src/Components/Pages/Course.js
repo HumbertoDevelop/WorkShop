@@ -9,7 +9,7 @@ const Course = ({ course, teacher }) => {
   useEffect(() => {
     store.dispatch(getCourse(params.id));
     store.dispatch(getTeacher(params.id));
-  }, []);
+  }, [params.id]);
   return (
     <section className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-col">
@@ -30,7 +30,7 @@ const Course = ({ course, teacher }) => {
                 <h2 className="font-medium title-font mt-4 text-white text-lg">
                   {teacher?.name}
                 </h2>
-                <div className="w-12 h-1 bg-cyan-600 rounded mt-2 mb-4"></div>
+                <div className="w-12 h-1 bg-cyan-600 rounded mt-2 mb-4" />
                 <p className="text-base text-gray-400">{teacher?.country}</p>
                 <p className="text-base text-gray-400">{teacher?.speciality}</p>
               </div>
@@ -42,11 +42,8 @@ const Course = ({ course, teacher }) => {
               <p className="leading-relaxed text-lg mb-4">{course?.bio}</p>
 
               <div className="grid grid-cols-2 gap-x-10">
-                <button className="rounded-full bg-cyan-800   text-white">
-                  <a onClick={() => window.alert("Reproduciendo Video")}>
-                    {" "}
-                    Ver Curso{" "}
-                  </a>
+                <button className="rounded-full bg-cyan-800   text-white" onClick={() => alert("Reproduciendo Video")}>
+                    Ver Curso
                 </button>
               </div>
             </div>
