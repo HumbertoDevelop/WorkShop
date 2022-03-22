@@ -3981,11 +3981,6 @@
     "jsbn" "~0.1.0"
     "safer-buffer" "^2.1.0"
 
-"ed-grid@^3.0.2":
-  "integrity" "sha512-2wFXy42Z0YAi6yZOB/9cajGtQf4n/ueUKaHJaeQeyjoPQWZNBBG1x1cifobMGXzQPnfMfP2wYrhvdcSACmU1ag=="
-  "resolved" "https://registry.npmjs.org/ed-grid/-/ed-grid-3.0.2.tgz"
-  "version" "3.0.2"
-
 "ee-first@1.1.1":
   "integrity" "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0="
   "resolved" "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz"
