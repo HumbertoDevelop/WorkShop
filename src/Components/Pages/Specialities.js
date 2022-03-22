@@ -6,6 +6,7 @@ import Banner from "../Organims/Banner";
 import Card from "../Organims/Card";
 
 const Specialities = ({ specialities }) => {
+  console.log(specialities);
   useEffect(() => {
     store.dispatch(getallSpecialities());
     

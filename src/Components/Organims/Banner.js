@@ -9,7 +9,7 @@ const Banner = ({ title, subtitle, home, specialities, courses, teachers }) => (
 			<section >
 				<div
 					className={`body-font  bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96  blur-sm `}></div>
-				<div className="container mx-auto flex flex-wrap items-center justify-around bg-stone-300 py-2 opacity-80 absolute top-1/2 sm:top-1/3 md:top-1/2 left-0 right-0 px-3 ">
+				<div className="container mx-auto flex flex-wrap items-center justify-around bg-cyan-900 text-white py-2 opacity-80 absolute top-1/2 sm:top-1/3 md:top-1/2 left-0 right-0 px-3 ">
 					<h2 className="sm:text-3xl text-2xl font-medium title-font mb-2 md:w-2/5  ">
 						{title}
 					</h2>
