@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getCourse, getTeacher } from "../../Redux/actionCreators";
 import store from "../../Redux/store";
+import Temario from "../Organims/Temary";
 
 const Course = ({ course, teacher }) => {
 	const params = useParams();
@@ -46,14 +47,7 @@ const Course = ({ course, teacher }) => {
 								Especialidad: {course?.name}
 							</h1>
 							<p className="leading-relaxed text-lg mb-4">{course?.bio}</p>
-
-							<div className="grid grid-cols-2 gap-x-10">
-								<button
-									className="rounded-full bg-cyan-800   text-white"
-									onClick={() => alert("Reproduciendo Video")}>
-									Ver Curso
-								</button>
-							</div>
+							<Temario />
 						</div>
 					</div>
 				</div>

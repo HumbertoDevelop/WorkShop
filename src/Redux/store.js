@@ -2,18 +2,18 @@ import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import {
-  fragmentReducer,
   coursesReducer,
   postsReducer,
   specialitiesReducer,
   teachersReducer,
   cartReducer,
+  temaryReducer,
 } from "./reducers";
 
 export default createStore(
   combineReducers({
     specialitiesReducer,
-    fragmentReducer,
+    temaryReducer,
     teachersReducer,
     postsReducer,
     coursesReducer,

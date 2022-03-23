@@ -21,7 +21,7 @@ const Specialities = ({ specialities }) => {
       {specialities && (
         <section className="text-gray-400 body-font bg-gray-900">
           <div className="container px-5 py-20 mx-auto">
-            <div className="flex flex-wrap -m-4">
+            <div className="flex flex-wrap m-4">
               {specialities.map((s) => (
                 <Card
                   key={s.id}
@@ -33,6 +33,7 @@ const Specialities = ({ specialities }) => {
                   teacher={s.teacher}
                   pictureTeacher={s.pictureTeacher}
                   path="especialidades"
+                  bio={s.bio}
                 />
               ))}
             </div>

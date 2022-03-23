@@ -20,6 +20,7 @@ const Card = ({
 	teacher,
 	pictureTeacher,
 	category,
+	bio
 }) => {
 	const [loading, setLoading] = useState(false);
 	const dispatch = useDispatch();
@@ -96,8 +97,7 @@ const Card = ({
 						</div>
 					</div>
 					<p className="leading-relaxed text-base">
-						Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-						hexagon disrupt edison bulbche.
+						{bio}
 					</p>
 					<div>
 						<div className="my-2 flex items-center justify-between">

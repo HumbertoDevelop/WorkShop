@@ -20,7 +20,7 @@ const Courses = ({ courses }) => {
       {courses && (
         <section className="text-gray-400 body-font bg-gray-900">
           <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-wrap -m-4">
+            <div className="flex flex-wrap m-4">
               {courses.map((c) => (
                 <Card
                   key={c.id}
@@ -32,6 +32,7 @@ const Courses = ({ courses }) => {
                   cardId={c.id}
                   teacher={c.teacher}
                   pictureTeacher={c.pictureTeacher}
+                  bio={c.bio}
                 />
               ))}
             </div>
