@@ -1,23 +1,32 @@
+/** @format */
+
 :root {
-  --paddingList-sides: 0.55rem;
+	--paddingList-sides: 0.25rem;
+	--marginList-sides: 0.25rem;
+}
+
+*{
+  overflow: hidden;
 }
 
 ul,
 ol {
-  list-style: none;
-  display: flex;
-  align-items: center;
+	list-style: none;
+	display: flex;
+	align-items: center;
 }
 
 ul > li {
-  padding: 0 var(--paddingList-sides);
+	padding: 0 var(--paddingList-sides);
+	margin: (--marginList-sides);
 }
 
 ol > li {
-  padding: 0 var(--paddingList-sides);
+	margin: (--marginList-sides);
+	padding: 0 var(--paddingList-sides);
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
