@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getSpeciality, getTeacher } from "../../Redux/actionCreators";
 import store from "../../Redux/store";
+import Temario from "../Organims/Temary";
 const Speciality = ({ speciality, teacher }) => {
 	const params = useParams();
 	useEffect(() => {
@@ -46,13 +47,7 @@ const Speciality = ({ speciality, teacher }) => {
 							</h1>
 							<p className="leading-relaxed text-lg mb-4">{speciality?.bio}</p>
 
-							<div className="grid grid-cols-2 gap-x-10">
-								<button
-									className="rounded-full bg-cyan-800   text-white"
-									onClick={() => alert("Reproduciendo Video")}>
-									Ver Curso
-								</button>
-							</div>
+							<Temario />
 						</div>
 					</div>
 				</div>
