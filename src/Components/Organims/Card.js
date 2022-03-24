@@ -80,9 +80,9 @@ const Card = ({
 						className="object-cover object-center h-full w-full"
 						allowFullScreen></iframe>
 
-					<div className="flex justify-between">
+					<div className="flex justify-between items-center">
 						<Link to={`/${path}/${cardId}`}>
-							<h2 className="text-lg text-white font-medium text-3xl title-font mb-4 pt-4">
+							<h2 className="md:text-lg smx2:text-sm  text-white font-medium text-3xl title-font mb-4 pt-4 overflow-y-hidden">
 								{name}
 							</h2>
 						</Link>
@@ -90,7 +90,7 @@ const Card = ({
 							<button
 								disabled={loading}
 								onClick={isProductInCart ? removefromCart : addtoCart}
-								className="rounded-full hover:bg-cyan-800  p-2 w-max hover:text-white bg-yellow-500 text-slate-900 font-bold px-4">
+								className="rounded-full hover:bg-cyan-800 smx2:p-1 md:text-lg  smx2:text-sm p-2 w-max hover:text-white bg-yellow-500 text-slate-900 font-bold px-4">
 								{isProductInCart ? "Quitar del carrito" : "Agregar al carrito"}
 								{loading ? "(Loading...)" : null}
 							</button>

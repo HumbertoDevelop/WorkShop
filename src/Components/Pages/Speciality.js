@@ -14,7 +14,7 @@ const Speciality = ({ speciality, teacher }) => {
 	}, [params.id]);
 	return (
 		<section className="text-gray-400 bg-gray-900 body-font">
-			<div className="container px-5 pt-40 pb-10 mx-auto flex flex-col">
+			<div className="container px-5 mt-48 mx-auto flex flex-col">
 				<div className="lg:w-4/6  mx-auto">
 					<div className="rounded-lg h-80 overflow-hidden">
 						<iframe
@@ -29,7 +29,7 @@ const Speciality = ({ speciality, teacher }) => {
 					</div>
 					<div className="flex flex-col sm:flex-row mt-10">
 						<div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-							<div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+							<div className="w-20 h-20 rounded-full overflow-y-hidden inline-flex items-center justify-center bg-gray-800 text-gray-600">
 								<img src={teacher?.picture} alt={teacher?.name} />
 							</div>
 							<div className="flex flex-col items-center text-center justify-center">

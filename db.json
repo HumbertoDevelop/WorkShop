@@ -202,14 +202,7 @@
       "price": 420
     }
   ],
-  "carrito": [
-    {
-      "id": 4,
-      "name": "Alemán",
-      "price": 520,
-      "category": "Cursos"
-    }
-  ],
+  "carrito": [],
   "signup": [
     {
       "email": "dani@gmail.com",

@@ -13,7 +13,7 @@ const Temario = ({ temary }) => {
 	}, []);
 	return (
 		<section className="text-gray-400 bg-gray-900 body-font grid justify-center">
-			<div className="container px-5 pb-5 mx-auto flex-wrap">
+			<div className="container  pb-5 mx-auto flex-wrap">
 				<h2 className="text-3xl text-center pb-2">Temario: </h2>
 				<div className=" w-full">
 					<div className="w-full md:pr-10 md:py-6">
