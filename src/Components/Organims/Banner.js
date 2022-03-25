@@ -9,7 +9,7 @@ const Banner = ({ title, subtitle, home, specialities, courses, teachers }) => (
 			<section >
 				<div
 					className={`body-font  bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center bg-fixed h-96  relative `}></div>
-				<div className="container mx-auto flex flex-wrap items-center justify-around bg-cyan-900 text-white py-2 opacity-80 absolute top-1/2 smx2:top-1/3 md:top-1/2 left-0 right-0 px-3 ">
+				<div className="container mx-auto flex flex-wrap items-center justify-around bg-cyan-900 text-white py-2 opacity-80 absolute top-1/2 smx2:top-1/3 sm:top-1/2 left-0 right-0 px-3 ">
 					<h2 className="sm:text-3xl text-2xl font-medium title-font mb-2 md:w-2/5  ">
 						{title}
 					</h2>
@@ -31,7 +31,7 @@ const Banner = ({ title, subtitle, home, specialities, courses, teachers }) => (
 			<section>
 				<div
 					className={`  body-font bg-[url('https://images.pexels.com/photos/7504837/pexels-photo-7504837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center relative`}></div>
-				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2 md:top-1/2 sm:top-1/3 md left-0 right-0">
+				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2  sm:top-1/2 md left-0 right-0">
 					<div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
 						<div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
 							<h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
@@ -46,7 +46,7 @@ const Banner = ({ title, subtitle, home, specialities, courses, teachers }) => (
 			<section>
 				<div
 					className={`  body-font bg-[url('https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center `}></div>
-				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2 md:top-1/2 sm:top-1/3 md left-0 right-0">
+				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2  sm:top-1/2 md left-0 right-0">
 					<div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
 						<div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
 							<h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
@@ -61,7 +61,7 @@ const Banner = ({ title, subtitle, home, specialities, courses, teachers }) => (
 			<section>
 				<div
 					className={`  body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-10 bg-fixed h-96 grid items-center `}></div>
-				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2 md:top-1/2 sm:top-1/3 md left-0 right-0">
+				<div className="container   mx-auto flex flex-wrap justify-center  absolute top-1/2  sm:top-1/2 md left-0 right-0">
 					<div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-full text-center sm:w-2/3 content-start sm:pr-10">
 						<div className="w-full sm:p-4 px-4 bg-cyan-900 rounded opacity-80 text-white">
 							<h1 className="title-font font-medium text-xl mb-2 ">{title}</h1>
