@@ -21,7 +21,7 @@ const Teachers = ({ match, teachers }) => {
 			{teachers && (
 				<section className="text-gray-400 bg-gray-900 body-font">
 					<div className="container px-5 py-24 mx-auto flex flex-wrap">
-						<div className="flex flex-wrap -m-4 mx-auto justify-center">
+						<div className="flex flex-wrap m-4 mx-auto justify-center">
 							{teachers.map((t) => (
 								<Teacher
 									key={t.id}

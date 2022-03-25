@@ -98,7 +98,7 @@ const Card = ({
 					</div>
 					<p className="leading-relaxed text-base">{bio}</p>
 					<div>
-						<div className="my-2 flex items-center justify-between">
+						<div className="smx2:grid smx1:flex my-2 flex items-center justify-between">
 							<div className="flex items-center">
 								<img
 									src={pictureTeacher}

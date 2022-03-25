@@ -9,6 +9,7 @@
   overflow-x: hidden;
 }
 
+
 ul,
 ol {
 	list-style: none;
@@ -29,4 +30,8 @@ ol > li {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+div,a,p,h1,h2,h3,h4,h5,h6,span{
+	overflow-y: hidden ;
 }
