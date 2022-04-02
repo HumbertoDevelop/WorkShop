@@ -209,6 +209,12 @@
       "name": "Daniel Moya",
       "password": "123",
       "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "name": "Humberto García",
+      "password": "123",
+      "id": 2
     }
   ],
   "posts": [

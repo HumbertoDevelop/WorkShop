@@ -11,15 +11,14 @@ const Cart = ({ items }) => {
 	);
 
 	let bought = (total) => {
-    if (total > 0) {
-      total = 0;
-      alert("Compra Exitosa!")
-      return 
-    }else{
-      alert("Elige un curso antes!")
-    }
+		if (total > 0) {
+			total = 0;
+			alert("Compra Exitosa!");
+			return;
+		} else {
+			alert("Elige un curso antes!");
+		}
 	};
-console.log(totalPrice);
 	return (
 		<section className=" body-font min-h-screen flex items-center className={`  body-font bg-[url('https://images.pexels.com/photos/5905703/pexels-photo-5905703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center`}">
 			<div className="container mx-auto ">
@@ -29,10 +28,10 @@ console.log(totalPrice);
 					</h1>
 				</div>
 				<div className="lg:w-2/3 w-full mx-auto overflow-auto">
-					<table className="table-auto w-full text-center whitespace-no-wrap  bg-yellow-500 h-20">
+					<table className="table-auto  text-center whitespace-no-wrap  bg-yellow-500 h-20">
 						<thead>
 							<tr>
-								<th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 rounded-tl rounded-bl text-center">
+								<th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800  text-center">
 									#Cod
 								</th>
 								<th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800">
@@ -44,13 +43,13 @@ console.log(totalPrice);
 								<th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800">
 									Precio
 								</th>
-								<th className="w-10 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 rounded-tr rounded-br">
+								<th className="w-10 title-font tracking-wider font-medium text-white text-sm bg-cyan-800 ">
 									🗑
 								</th>
 							</tr>
 						</thead>
 						{items && (
-							<tbody >
+							<tbody>
 								{items.map(({ id, name, category, price }) => (
 									<ItemTd
 										key={id}
@@ -73,7 +72,6 @@ console.log(totalPrice);
 					<div className="flex items-center text-white">
 						<p>Total: ${totalPrice}</p>
 					</div>
-          
 				</div>
 			</div>
 		</section>

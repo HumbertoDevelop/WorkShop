@@ -31,7 +31,7 @@ const App = () => {
 	}, [updateCart]);
 
 	return (
-		<div>
+		<div id="outer">
 			<Header />
 			<Routes>
 				<Route
