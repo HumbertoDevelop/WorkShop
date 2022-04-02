@@ -14,7 +14,7 @@ const removeToken = () => {
 const Header = ({ cart }) => {
 	return (
 
-		<>
+		<div id="outer">
 		{window.document.defaultView.innerWidth <= 768 &&
 				window.document.defaultView.innerWidth >= 320
 					? (
@@ -65,7 +65,7 @@ const Header = ({ cart }) => {
 					)
 					
 					}
-		</>
+		</div>
 		
 	);
 };

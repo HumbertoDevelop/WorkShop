@@ -31,7 +31,7 @@ const App = () => {
 	}, [updateCart]);
 
 	return (
-		<div id="outer">
+		<div>
 			<Header />
 			<Routes>
 				<Route
@@ -110,7 +110,7 @@ const App = () => {
 				/>
 
 				{/* Default Route */}
-				<Route path="*"  element={<NotFound />} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 			<Footer />
 		</div>

@@ -5,14 +5,11 @@ import { NavLink } from "react-router-dom";
 import PrivateMenuMobile from "./PrivateMenuMobile";
 
 const MenuMobile = (props) => {
-	const showSettings = (event) => {
-		event.preventDefault();
-	};
 	return (
 		<Menu {...props}>
 			<div
 				className="container mx-auto  py-2 items-center justify-center h-80"
-				 id="outer">
+				id="outer">
 				<NavLink
 					to="/"
 					className="flex title-font font-medium justify-center items-center text-white mb-4 md:mb-0">
@@ -29,12 +26,14 @@ const MenuMobile = (props) => {
 					</svg>
 					<span className="ml-3 text-xl text-white">SpeakUpEnglish</span>
 				</NavLink>
-				<nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l	grid items-center " id="page-wrap">
+				<nav
+					className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l	grid items-center "
+					id="page-wrap">
 					{localStorage.getItem("token") ? <PrivateMenuMobile /> : null}
 				</nav>
 				{localStorage.getItem("token") ? (
 					<div className="grid items-center ">
-						<a href="/login" onClick={ props.removeToken}>
+						<a href="/login" onClick={props.removeToken}>
 							<button className="inline-flex items-center  border-0  hover:text-yellow-500 rounded text-base mt-4 md:mt-0 text-stone-100 mr-4">
 								Cerrar Sesión
 							</button>
