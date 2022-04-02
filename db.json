@@ -202,7 +202,14 @@
       "price": 420
     }
   ],
-  "carrito": [],
+  "carrito": [
+    {
+      "id": 1,
+      "name": "Alemán",
+      "price": 100,
+      "category": "Especialidades"
+    }
+  ],
   "signup": [
     {
       "email": "dani@gmail.com",

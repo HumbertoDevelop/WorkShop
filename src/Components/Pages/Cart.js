@@ -28,7 +28,7 @@ const Cart = ({ items }) => {
 					</h1>
 				</div>
 				<div className="lg:w-2/3 w-full mx-auto overflow-auto">
-					<table className="table-auto  text-center whitespace-no-wrap  bg-yellow-500 h-20">
+					<table className="table-auto w-full text-center whitespace-no-wrap  bg-yellow-500 h-20">
 						<thead>
 							<tr>
 								<th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-cyan-800  text-center">

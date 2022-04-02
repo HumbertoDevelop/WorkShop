@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const PrivateMenuMobile = () => {
   return (
-    <ul className="grid">
+    <ul className="grid text-justify">
       <li title="Enlace de inicio">
         <NavLink to="/">Inicio</NavLink>
       </li>
