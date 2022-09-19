@@ -30,8 +30,8 @@ const registration = (e) => {
 
 const Register = () => {
 	return (
-		<section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-24">
-			<div className="container px-5 py-10 mx-auto flex flex-wrap items-center">
+		<section className=" bg-gray-900 body-font bg-[url('https://images.pexels.com/photos/6281877/pexels-photo-6281877.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=2000')] bg-no-repeat bg-cover bg-center py-40" >
+			<div className="container px-5 py-10 mx-auto flex flex-wrap items-center h-100">
 				<div className="lg:w-2/5 md:w-1/2 md:pr-16  bg-stone-300 opcity-80 p-4 rounded">
 					<h1 className="title-font font-medium text-3xl ">
 						<span className="text-red-600">Curso 100% online</span> Aprende
