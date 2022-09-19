@@ -1,12 +1,12 @@
 /** @format */
-import { slide as Menu } from "react-burger-menu";
+// import { slide as Menu } from "react-burger-menu"; not working
 import React from "react";
 import { NavLink } from "react-router-dom";
 import PrivateMenuMobile from "./PrivateMenuMobile";
 
 const MenuMobile = (props) => {
 	return (
-		<Menu {...props}>
+		// <Menu {...props}> not working
 			<div
 				className="container mx-auto  py-2 items-center justify-center h-80"
 				id="outer">
@@ -44,7 +44,7 @@ const MenuMobile = (props) => {
 					</div>
 				) : null}
 			</div>
-		</Menu>
+		// </Menu> 
 	);
 };
 
